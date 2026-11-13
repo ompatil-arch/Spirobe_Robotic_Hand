@@ -552,6 +552,7 @@
       .desktop-nav {
         gap: 12px;
       }
+
       .desktop-nav a {
         font-size: 0.8125rem;
       }
@@ -561,6 +562,7 @@
       .desktop-nav {
         gap: 8px;
       }
+
       .brand-uni-motto {
         display: none;
       }
@@ -1130,7 +1132,7 @@
     /* =========================================================================
        SECTION 8: ELECTRONIC CONTROL FLOW
        ========================================================================= */
-        /* =========================================================================
+    /* =========================================================================
        SECTION 9: CONTROL INTERFACE
        ========================================================================= */
     .control-dashboard {
@@ -4236,9 +4238,9 @@
       }
 
     }
-  
 
-.timeline-thumb {
+
+    .timeline-thumb {
       width: 180px;
       height: 120px;
       flex-shrink: 0;
@@ -4248,32 +4250,32 @@
       overflow: hidden;
     }
 
-.timeline-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
+    .timeline-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
 
-.timeline-entry:hover .timeline-thumb img {
-  transform: scale(1.04);
-}
+    .timeline-entry:hover .timeline-thumb img {
+      transform: scale(1.04);
+    }
 
-.timeline-thumb.timeline-video-thumb {
-  width: 200px;
-  height: 125px;
-  border: 1px solid var(--border-medium);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
-}
+    .timeline-thumb.timeline-video-thumb {
+      width: 200px;
+      height: 125px;
+      border: 1px solid var(--border-medium);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    }
 
-.timeline-thumb.timeline-video-thumb video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 6px;
-}
+    .timeline-thumb.timeline-video-thumb video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+    }
 
-.video-live-badge {
+    .video-live-badge {
       position: absolute;
       top: 8px;
       right: 8px;
@@ -4290,13 +4292,15 @@
       pointer-events: none;
     }
 
-@media (max-width: 768px) {
-  .timeline-thumb, .timeline-thumb.timeline-video-thumb {
-    width: 100%;
-    height: 180px;
-    margin-top: 14px;
-  }
-}
+    @media (max-width: 768px) {
+
+      .timeline-thumb,
+      .timeline-thumb.timeline-video-thumb {
+        width: 100%;
+        height: 180px;
+        margin-top: 14px;
+      }
+    }
 
 
 
@@ -4355,8 +4359,17 @@
     }
 
     @keyframes dynDotPulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.35; transform: scale(0.8); }
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.35;
+        transform: scale(0.8);
+      }
     }
 
     .dynamics-nav-pills {
@@ -4665,9 +4678,11 @@
       .dynamics-steps-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
       .dynamics-hud-overlay {
         flex-direction: column;
       }
+
       .dyn-hud-card {
         max-width: 100%;
       }
@@ -4677,13 +4692,16 @@
       .dynamics-steps-grid {
         grid-template-columns: 1fr;
       }
+
       .dynamics-header-bar {
         flex-direction: column;
         align-items: flex-start;
       }
+
       .dynamics-nav-pills {
         width: 100%;
       }
+
       .dyn-pill-btn {
         flex: 1;
         text-align: center;
@@ -4705,13 +4723,13 @@
       pointer-events: none !important;
       visibility: hidden !important;
     }
+
     video::-moz-media-controls-volume-button,
     video::-moz-media-controls-volume-slider {
       display: none !important;
       pointer-events: none !important;
       visibility: hidden !important;
     }
-
   </style>
   <!-- Three.js & OrbitControls for 3D CAD Assembly Viewer -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -4740,7 +4758,8 @@
   <header class="site-header">
     <div class="container nav-container">
       <a href="#hero" class="brand-logo" aria-label="Sanjivani University Makerspace">
-        <img src="assets/images/university/sanjivani_university_logo.jpg" alt="Sanjivani University Logo" class="brand-uni-logo">
+        <img src="assets/images/university/sanjivani_university_logo.jpg" alt="Sanjivani University Logo"
+          class="brand-uni-logo">
       </a>
 
       <nav class="desktop-nav" aria-label="Main Navigation">
@@ -4909,14 +4928,19 @@
 
 
         <!-- Bio-Motion Continuum Study Feature Image -->
-        <div class="about-feature-img" style="height: 520px; background: #080a0f; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;"
+        <div class="about-feature-img"
+          style="height: 520px; background: #080a0f; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;"
           onclick="openPhotoViewer('assets/spirobe_spiral_prototype.jpg', 'Bio-Inspired Logarithmic Spiral Continuum Architecture', 'Physical 3D-Printed Vertebrae Chain')">
           <img src="assets/spirobe_spiral_prototype.jpg" alt="SPIROBE Logarithmic Spiral Continuum Tentacle Mechanism"
-            style="width: 100%; height: 100%; object-fit: contain; object-position: center; display: block;" loading="lazy">
+            style="width: 100%; height: 100%; object-fit: contain; object-position: center; display: block;"
+            loading="lazy">
           <div
             style="position: absolute; bottom: 16px; left: 20px; background: rgba(14, 16, 20, 0.92); padding: 10px 18px; border-radius: var(--radius-sm); border: 1px solid var(--border-medium); backdrop-filter: blur(8px); max-width: calc(100% - 40px);">
-            <div style="font-size: 0.9375rem; font-weight: 600; color: var(--text-primary);">Bio-Inspired Logarithmic Spiral Continuum Architecture</div>
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">Physical 3D-Printed Vertebrae Chain with Embedded Living Hinges and Antagonist Tendon Routing • Click to Enlarge ↗</div>
+            <div style="font-size: 0.9375rem; font-weight: 600; color: var(--text-primary);">Bio-Inspired Logarithmic
+              Spiral Continuum Architecture</div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">Physical
+              3D-Printed Vertebrae Chain with Embedded Living Hinges and Antagonist Tendon Routing • Click to Enlarge ↗
+            </div>
           </div>
         </div>
 
@@ -4971,10 +4995,12 @@
             </div>
 
             <!-- Conventional Industrial Robotic Arm & Rigid Gripper -->
-            <div class="problem-diagram-wrap" style="height: 360px; padding: 0; overflow: hidden; position: relative; cursor: pointer; background: #080a0f; display: flex; align-items: center; justify-content: center;"
+            <div class="problem-diagram-wrap"
+              style="height: 360px; padding: 0; overflow: hidden; position: relative; cursor: pointer; background: #080a0f; display: flex; align-items: center; justify-content: center;"
               onclick="openPhotoViewer('assets/industrial_robot_arm_bench.jpg', 'Industrial Robotic Arm Integration', 'Conventional Rigid Kinematics vs. Soft Gripper Test Bench')">
               <img src="assets/industrial_robot_arm_bench.jpg" alt="Industrial Robotic Arm with Gripper Mechanism"
-                style="width: 100%; height: 100%; object-fit: contain; object-position: center; display: block;" loading="lazy">
+                style="width: 100%; height: 100%; object-fit: contain; object-position: center; display: block;"
+                loading="lazy">
               <div
                 style="position: absolute; bottom: 8px; left: 12px; right: 12px; background: rgba(14, 16, 20, 0.9); padding: 6px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: 0.6875rem; color: var(--text-light); backdrop-filter: blur(8px);">
                 Universal Robots UR Arm: Rigid Joint Kinematics & End-Effector Workstation • Click to Enlarge ↗
@@ -5006,13 +5032,17 @@
             </div>
 
             <!-- SPIROBE Compliant Grasping Prototype (Strawberry Manipulation) -->
-            <div class="problem-diagram-wrap" style="height: 360px; padding: 0; overflow: hidden; position: relative; cursor: pointer; background: #080a0f; display: flex; align-items: center; justify-content: center;"
+            <div class="problem-diagram-wrap"
+              style="height: 360px; padding: 0; overflow: hidden; position: relative; cursor: pointer; background: #080a0f; display: flex; align-items: center; justify-content: center;"
               onclick="openPhotoViewer('assets/spirobe_delicate_grasp_strawberry.jpg', 'SPIROBE Compliant Grasping Mechanism', 'Soft Continuum Grip on Delicate Fruit (Strawberry Manipulation)')">
-              <img src="assets/spirobe_delicate_grasp_strawberry.jpg" alt="SPIROBE Bio-Inspired Soft Gripper: Compliant Grasping of a Delicate Strawberry"
-                style="width: 100%; height: 100%; object-fit: contain; object-position: center; display: block;" loading="lazy">
+              <img src="assets/spirobe_delicate_grasp_strawberry.jpg"
+                alt="SPIROBE Bio-Inspired Soft Gripper: Compliant Grasping of a Delicate Strawberry"
+                style="width: 100%; height: 100%; object-fit: contain; object-position: center; display: block;"
+                loading="lazy">
               <div
                 style="position: absolute; bottom: 8px; left: 12px; right: 12px; background: rgba(14, 16, 20, 0.9); padding: 6px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: 0.6875rem; color: var(--text-light); backdrop-filter: blur(8px);">
-                Compliant Continuum Grasp: Wrapping Delicately Around Strawberry Without Pinch-Point Damage • Click to Enlarge ↗
+                Compliant Continuum Grasp: Wrapping Delicately Around Strawberry Without Pinch-Point Damage • Click to
+                Enlarge ↗
               </div>
             </div>
 
@@ -5109,7 +5139,7 @@
       </div>
     </section>
 
-        <!-- =========================================================================
+    <!-- =========================================================================
        SECTION 3: HOW SPIROBE WORKS • OPERATING DYNAMICS & KINEMATICS
        ========================================================================= -->
     <section id="principle" class="dynamics-section">
@@ -5118,7 +5148,8 @@
           <div class="section-eyebrow">Operating Dynamics</div>
           <h2 class="section-title">How SPIROBE Works</h2>
           <p class="section-desc" style="max-width: 760px; margin: 0 auto;">
-            Actuation unfolds in four sequential engineering phases from resting posture to stable conformable grasping. Explore each phase in the interactive kinematic simulator below.
+            Actuation unfolds in four sequential engineering phases from resting posture to stable conformable grasping.
+            Explore each phase in the interactive kinematic simulator below.
           </p>
         </div>
 
@@ -5145,13 +5176,14 @@
           <!-- Canvas Stage & Telemetry Overlay -->
           <div class="dynamics-canvas-wrapper">
             <canvas id="spirobeDynamicsCanvas" width="1200" height="460"></canvas>
-            
+
             <!-- Live HUD Overlay Elements -->
             <div class="dynamics-hud-overlay">
               <!-- Top Left: Current State Callout -->
               <div class="dyn-hud-card dyn-hud-left">
                 <div class="dyn-hud-title" id="dynHudTitle">SEGMENTED CONTINUUM SPINE</div>
-                <div class="dyn-hud-desc" id="dynHudDesc">15 articulated vertebrae aligned in neutral posture (κ = 0). Interlocking limit stops prevent buckling while elastic core maintains structural alignment.</div>
+                <div class="dyn-hud-desc" id="dynHudDesc">15 articulated vertebrae aligned in neutral posture (κ = 0).
+                  Interlocking limit stops prevent buckling while elastic core maintains structural alignment.</div>
                 <div class="dyn-hud-tags" id="dynHudTags">
                   <span class="dyn-tag">15 Vertebrae</span>
                   <span class="dyn-tag">±18° Chamfer Limit</span>
@@ -5186,27 +5218,33 @@
                 <span>MANUAL FLEXION CONTROL:</span>
                 <span id="dynSliderPercent" style="color: #38bdf8; font-weight: 600;">0%</span>
               </div>
-              <input type="range" id="dynFlexionSlider" min="0" max="100" value="0" step="1" oninput="handleDynamicsSlider(this.value)">
+              <input type="range" id="dynFlexionSlider" min="0" max="100" value="0" step="1"
+                oninput="handleDynamicsSlider(this.value)">
               <div class="dyn-payload-selector" id="dynPayloadSelector">
                 <span class="dyn-payload-title">COLLECTION OF ITEMS:</span>
                 <div class="dyn-payload-items">
-                  <button class="dyn-obj-btn active" id="btnPayloadStrawberry" onclick="setDynamicsPayload('strawberry')" title="Organic Soft Fruit (Laboratory Benchmark)">
+                  <button class="dyn-obj-btn active" id="btnPayloadStrawberry"
+                    onclick="setDynamicsPayload('strawberry')" title="Organic Soft Fruit (Laboratory Benchmark)">
                     <span>🍓</span>
                     <span>Strawberry</span>
                   </button>
-                  <button class="dyn-obj-btn" id="btnPayloadCylinder" onclick="setDynamicsPayload('cylinder')" title="Machined 6061 Alloy Cylinder">
+                  <button class="dyn-obj-btn" id="btnPayloadCylinder" onclick="setDynamicsPayload('cylinder')"
+                    title="Machined 6061 Alloy Cylinder">
                     <span>🥫</span>
                     <span>Cylinder</span>
                   </button>
-                  <button class="dyn-obj-btn" id="btnPayloadSphere" onclick="setDynamicsPayload('sphere')" title="Brittle Thin-Shell Bird Egg">
+                  <button class="dyn-obj-btn" id="btnPayloadSphere" onclick="setDynamicsPayload('sphere')"
+                    title="Brittle Thin-Shell Bird Egg">
                     <span>🥚</span>
                     <span>Egg</span>
                   </button>
-                  <button class="dyn-obj-btn" id="btnPayloadTomato" onclick="setDynamicsPayload('tomato')" title="Elastic Hydrostatic Cherry Tomato">
+                  <button class="dyn-obj-btn" id="btnPayloadTomato" onclick="setDynamicsPayload('tomato')"
+                    title="Elastic Hydrostatic Cherry Tomato">
                     <span>🍅</span>
                     <span>Tomato</span>
                   </button>
-                  <button class="dyn-obj-btn" id="btnPayloadVial" onclick="setDynamicsPayload('vial')" title="Borosilicate Glass Sample Vial with Fluid">
+                  <button class="dyn-obj-btn" id="btnPayloadVial" onclick="setDynamicsPayload('vial')"
+                    title="Borosilicate Glass Sample Vial with Fluid">
                     <span>🧪</span>
                     <span>Lab Vial</span>
                   </button>
@@ -5225,7 +5263,8 @@
               </div>
               <h3 class="step-name">Segmented Structure</h3>
               <p class="step-desc">
-                Multiple 3D-printed segments are arranged to form a flexible tentacle. Each segment features interlocking limit stops that constrain excessive deflection and form the structural continuum.
+                Multiple 3D-printed segments are arranged to form a flexible tentacle. Each segment features
+                interlocking limit stops that constrain excessive deflection and form the structural continuum.
               </p>
               <div class="dyn-card-metric">
                 <span>Kinematics:</span>
@@ -5241,7 +5280,8 @@
               </div>
               <h3 class="step-name">Cable Mechanism</h3>
               <p class="step-desc">
-                Cables run through the structure and transmit pulling forces from the motor mechanism. Low-friction lateral guide eyelets route the tension lines along the outer radius of each vertebra.
+                Cables run through the structure and transmit pulling forces from the motor mechanism. Low-friction
+                lateral guide eyelets route the tension lines along the outer radius of each vertebra.
               </p>
               <div class="dyn-card-metric">
                 <span>Tendon Spec:</span>
@@ -5257,7 +5297,8 @@
               </div>
               <h3 class="step-name">Motorized Movement</h3>
               <p class="step-desc">
-                Geared DC motors pull or release the cables, producing the required bending and curling movements. Winch spools convert motor output torque into high-tension linear cable displacement.
+                Geared DC motors pull or release the cables, producing the required bending and curling movements. Winch
+                spools convert motor output torque into high-tension linear cable displacement.
               </p>
               <div class="dyn-card-metric">
                 <span>Transmission:</span>
@@ -5273,7 +5314,8 @@
               </div>
               <h3 class="step-name">Grasping Action</h3>
               <p class="step-desc">
-                The tentacle curls around suitable objects and can release them through controlled cable movement. The logarithmic spiral geometry naturally conforms around unknown shapes with distributed pressure.
+                The tentacle curls around suitable objects and can release them through controlled cable movement. The
+                logarithmic spiral geometry naturally conforms around unknown shapes with distributed pressure.
               </p>
               <div class="dyn-card-metric">
                 <span>Envelope:</span>
@@ -6594,7 +6636,12 @@
                     </svg>
                     <span>Assembly Animation</span>
                   </button>
-
+                  <button class="cad-mode-btn" data-mode="curl" id="cadModeCurlBtn">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 12a8 8 0 0 1 14.93-4M20 12a8 8 0 0 1-14.93 4" />
+                    </svg>
+                    <span>Continuum Curl</span>
+                  </button>
                 </div>
               </div>
 
@@ -6612,6 +6659,20 @@
                   <button class="cad-tool-btn"
                     onclick="document.getElementById('cadExplodeSlider').value=100; document.getElementById('cadExplodeSlider').dispatchEvent(new Event('input'))">100%
                     (Full)</button>
+                </div>
+              </div>
+
+              <!-- Continuum Kinematic Curl Controls Tray -->
+              <div id="cadCurlTray" class="cad-subcontrol-tray cad-tray-hidden">
+                <div class="cad-slider-wrap">
+                  <span class="cad-slider-label">TENDON TENSION / CURL ANGLE</span>
+                  <input id="cadCurlSlider" type="range" min="-85" max="85" value="0" class="cad-range-slider">
+                  <span id="cadCurlVal" class="cad-slider-val">0° (Neutral)</span>
+                </div>
+                <div class="cad-btn-group">
+                  <button id="cadCurlResetBtn" class="cad-tool-btn" onclick="document.getElementById('cadCurlSlider').value=0; document.getElementById('cadCurlSlider').dispatchEvent(new Event('input'))">0° (Neutral)</button>
+                  <button class="cad-tool-btn" onclick="document.getElementById('cadCurlSlider').value=65; document.getElementById('cadCurlSlider').dispatchEvent(new Event('input'))">+65° (Curl Right)</button>
+                  <button class="cad-tool-btn" onclick="document.getElementById('cadCurlSlider').value=-65; document.getElementById('cadCurlSlider').dispatchEvent(new Event('input'))">-65° (Curl Left)</button>
                 </div>
               </div>
 
@@ -6828,28 +6889,10 @@
               <!-- Tentacle Segments -->
               <div class="cad-comp-item" data-id="tentacle-seg1">
                 <div class="cad-comp-left">
-                  <span class="cad-comp-color-tag" style="background: #788194;"></span>
+                  <span class="cad-comp-color-tag" style="background: #f4f6f8; border: 1px solid #cbd5e1;"></span>
                   <div class="cad-comp-info">
-                    <div class="cad-comp-name">Vertebra 1: Proximal Root Link</div>
-                    <div class="cad-comp-sub">Anchored to Clevis • 70×20×11 mm (100%)</div>
-                  </div>
-                </div>
-                <div class="cad-comp-actions">
-                  <button class="cad-icon-btn cad-eye-btn" title="Toggle Visibility">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                      <circle cx="12" cy="12" r="3" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-
-              <div class="cad-comp-item" data-id="tentacle-seg4">
-                <div class="cad-comp-left">
-                  <span class="cad-comp-color-tag" style="background: #788194;"></span>
-                  <div class="cad-comp-info">
-                    <div class="cad-comp-name">Vertebra 4: Mid-Span Flexure</div>
-                    <div class="cad-comp-sub">Articulated • 55×16×9 mm (80%)</div>
+                    <div class="cad-comp-name">Vertebra 01: Proximal Root Knuckle</div>
+                    <div class="cad-comp-sub">Clevis Mated • 28×12×15 mm (100%)</div>
                   </div>
                 </div>
                 <div class="cad-comp-actions">
@@ -6864,10 +6907,28 @@
 
               <div class="cad-comp-item" data-id="tentacle-seg8">
                 <div class="cad-comp-left">
-                  <span class="cad-comp-color-tag" style="background: #c8a86b;"></span>
+                  <span class="cad-comp-color-tag" style="background: #e2e8f0; border: 1px solid #94a3b8;"></span>
                   <div class="cad-comp-info">
-                    <div class="cad-comp-name">Vertebra 8: Distal Gripper Tip</div>
-                    <div class="cad-comp-sub">End Effector Pad • 41×12×6 mm (58%)</div>
+                    <div class="cad-comp-name">Vertebra 08: Mid-Span Kinematic Flexure</div>
+                    <div class="cad-comp-sub">±18° Limit Stops • 20×8×10 mm (71%)</div>
+                  </div>
+                </div>
+                <div class="cad-comp-actions">
+                  <button class="cad-icon-btn cad-eye-btn" title="Toggle Visibility">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                      <circle cx="12" cy="12" r="3" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="cad-comp-item" data-id="tentacle-seg15">
+                <div class="cad-comp-left">
+                  <span class="cad-comp-color-tag" style="background: #38bdf8;"></span>
+                  <div class="cad-comp-info">
+                    <div class="cad-comp-name">Vertebra 15: Distal Grasping End-Effector</div>
+                    <div class="cad-comp-sub">Conformal Gripper Pad • 12×5×6 mm (42%)</div>
                   </div>
                 </div>
                 <div class="cad-comp-actions">
@@ -7864,10 +7925,10 @@
       </div>
     </section>
 
-        <!-- =========================================================================
+    <!-- =========================================================================
        SECTION 10: CONTROL ARCHITECTURE & LIVE TELEMETRY BUS
        ========================================================================= -->
-    
+
 
     <section id="development">
       <div class="container">
@@ -7875,7 +7936,8 @@
           <div class="section-eyebrow">Engineering Workflow & Validation</div>
           <h2 class="section-title">From Design to Prototype</h2>
           <p class="section-desc" style="max-width: 720px; margin: 0 auto;">
-            The 4-stage engineering workflow from biological observation and SolidWorks CAD modeling to precision 3D printing and complete hardware integration.
+            The 4-stage engineering workflow from biological observation and SolidWorks CAD modeling to precision 3D
+            printing and complete hardware integration.
           </p>
         </div>
 
@@ -7888,11 +7950,15 @@
                 <div class="timeline-stage">Stage 01</div>
                 <h3 class="timeline-heading">1. Bio-Inspired Concept & Continuum Kinematics</h3>
                 <p class="timeline-body">
-                  Mathematical modeling of muscular hydrostat mechanics. Formulating logarithmic spiral taper equations to deliver smooth, variable curvature grasping across the continuum spine.
+                  Mathematical modeling of muscular hydrostat mechanics. Formulating logarithmic spiral taper equations
+                  to deliver smooth, variable curvature grasping across the continuum spine.
                 </p>
               </div>
-              <div class="timeline-thumb" onclick="openPhotoViewer('assets/stage1_concept_biomimetic.png', 'Stage 1: Bio-Inspired Concept Development', 'Logarithmic Spiral Mathematical Modeling')" style="cursor: pointer;">
-                <img src="assets/stage1_concept_biomimetic.png" alt="Stage 1: Bio-Inspired Concept Development" loading="lazy">
+              <div class="timeline-thumb"
+                onclick="openPhotoViewer('assets/stage1_concept_biomimetic.png', 'Stage 1: Bio-Inspired Concept Development', 'Logarithmic Spiral Mathematical Modeling')"
+                style="cursor: pointer;">
+                <img src="assets/stage1_concept_biomimetic.png" alt="Stage 1: Bio-Inspired Concept Development"
+                  loading="lazy">
               </div>
             </div>
           </div>
@@ -7905,11 +7971,15 @@
                 <div class="timeline-stage">Stage 02</div>
                 <h3 class="timeline-heading">2. Parametric SolidWorks CAD Modeling</h3>
                 <p class="timeline-body">
-                  Full 3D parametric CAD modeling in SolidWorks. Precision engineering of interlocking clevis hinges, integrated cable guide eyelets, rigid actuator mounts, and enclosure chassis.
+                  Full 3D parametric CAD modeling in SolidWorks. Precision engineering of interlocking clevis hinges,
+                  integrated cable guide eyelets, rigid actuator mounts, and enclosure chassis.
                 </p>
               </div>
-              <div class="timeline-thumb" onclick="openPhotoViewer('assets/stage2_solidworks_cad.jpg', 'Stage 2: Parametric SolidWorks CAD Modeling', 'SolidWorks CAD Architecture')" style="cursor: pointer;">
-                <img src="assets/stage2_solidworks_cad.jpg" alt="Stage 2: Parametric SolidWorks CAD Modeling" loading="lazy">
+              <div class="timeline-thumb"
+                onclick="openPhotoViewer('assets/stage2_solidworks_cad.jpg', 'Stage 2: Parametric SolidWorks CAD Modeling', 'SolidWorks CAD Architecture')"
+                style="cursor: pointer;">
+                <img src="assets/stage2_solidworks_cad.jpg" alt="Stage 2: Parametric SolidWorks CAD Modeling"
+                  loading="lazy">
               </div>
             </div>
           </div>
@@ -7922,11 +7992,15 @@
                 <div class="timeline-stage">Stage 03</div>
                 <h3 class="timeline-heading">3. Precision 3D Printing of Continuum Vertebrae</h3>
                 <p class="timeline-body">
-                  Additive manufacturing on Bambu Lab high-speed 3D printers using engineered PLA/PETG. High perimeter wall density for unbreakable pivot hinges and frictionless cable passages.
+                  Additive manufacturing on Bambu Lab high-speed 3D printers using engineered PLA/PETG. High perimeter
+                  wall density for unbreakable pivot hinges and frictionless cable passages.
                 </p>
               </div>
-              <div class="timeline-thumb" onclick="openPhotoViewer('assets/stage3_3d_printing_bambu.jpg', 'Stage 3: 3D Printing Vertebrae on Bambu Lab', 'Additive Manufacturing on High-Speed Printers')" style="cursor: pointer;">
-                <img src="assets/stage3_3d_printing_bambu.jpg" alt="Stage 3: 3D Printing Vertebrae on Bambu Lab" loading="lazy">
+              <div class="timeline-thumb"
+                onclick="openPhotoViewer('assets/stage3_3d_printing_bambu.jpg', 'Stage 3: 3D Printing Vertebrae on Bambu Lab', 'Additive Manufacturing on High-Speed Printers')"
+                style="cursor: pointer;">
+                <img src="assets/stage3_3d_printing_bambu.jpg" alt="Stage 3: 3D Printing Vertebrae on Bambu Lab"
+                  loading="lazy">
               </div>
             </div>
           </div>
@@ -7939,26 +8013,26 @@
                 <div class="timeline-stage">Stage 04</div>
                 <h3 class="timeline-heading">4. Complete Hardware & Actuation Integration</h3>
                 <p class="timeline-body">
-                  Mechanical pin-joint assembly of the 3D-printed continuum spine, mounting dual N20 gearmotors into chassis retention bosses, routing antagonist tendon cables through eyelets, and connecting the L298N motor driver to the ESP32 microcontroller with dynamic motion verification.
+                  Mechanical pin-joint assembly of the 3D-printed continuum spine, mounting dual N20 gearmotors into
+                  chassis retention bosses, routing antagonist tendon cables through eyelets, and connecting the L298N
+                  motor driver to the ESP32 microcontroller with dynamic motion verification.
                 </p>
               </div>
-              <div class="timeline-thumbs-group" style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
-                <div class="timeline-thumb" onclick="openPhotoViewer('assets/stage4_5_6_assembled_hardware.jpg', 'Stage 4: Complete Hardware Integration', 'Assembled Continuum Spine, Actuators & ESP32 Electronics')" style="cursor: pointer;" title="Hardware Assembly">
-                  <img src="assets/stage4_5_6_assembled_hardware.jpg" alt="Stage 4: Complete Hardware & Actuation Integration" loading="lazy">
+              <div class="timeline-thumbs-group"
+                style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                <div class="timeline-thumb"
+                  onclick="openPhotoViewer('assets/stage4_5_6_assembled_hardware.jpg', 'Stage 4: Complete Hardware Integration', 'Assembled Continuum Spine, Actuators & ESP32 Electronics')"
+                  style="cursor: pointer;" title="Hardware Assembly">
+                  <img src="assets/stage4_5_6_assembled_hardware.jpg"
+                    alt="Stage 4: Complete Hardware & Actuation Integration" loading="lazy">
                 </div>
-                <div class="timeline-thumb timeline-video-thumb" onclick="openPhotoViewer('assets/stage7_motion_testing.mp4', 'Motion Testing & Dynamic Kinematics Verification', 'Live Bench Testing • Permanently Muted')" style="cursor: pointer; position: relative;" title="Physical Articulation Verification (Muted)">
-                  <video 
-                    src="assets/stage7_motion_testing.mp4" 
-                    autoplay 
-                    loop 
-                    muted 
-                    playsinline 
-                    disablepictureinpicture 
-                    disableremoteplayback
-                    preload="auto"
+                <div class="timeline-thumb timeline-video-thumb"
+                  onclick="openPhotoViewer('assets/stage7_motion_testing.mp4', 'Motion Testing & Dynamic Kinematics Verification', 'Live Bench Testing • Permanently Muted')"
+                  style="cursor: pointer; position: relative;" title="Physical Articulation Verification (Muted)">
+                  <video src="assets/stage7_motion_testing.mp4" autoplay loop muted playsinline disablepictureinpicture
+                    disableremoteplayback preload="auto"
                     style="width: 100%; height: 100%; object-fit: cover; display: block;"
-                    poster="assets/stage4_5_6_assembled_hardware.jpg"
-                  ></video>
+                    poster="assets/stage4_5_6_assembled_hardware.jpg"></video>
                   <div class="video-live-badge">▶ MOTION TEST</div>
                 </div>
               </div>
@@ -8096,7 +8170,8 @@
           <div
             style="width: 96px; height: 96px; border-radius: 50%; overflow: hidden; border: 2px solid var(--border-medium); flex-shrink: 0; background: #000; box-shadow: 0 4px 20px rgba(0,0,0,0.6); cursor: pointer;"
             onclick="openPhotoViewer('assets/images/team/dr_kiran_wakchaure.jpg', 'Dr. Kiran Wakchaure Sir', 'Project Director • Sanjivani University')">
-            <img src="assets/images/team/dr_kiran_wakchaure.jpg" alt="Dr. Kiran Wakchaure Sir - Project Director, Sanjivani University"
+            <img src="assets/images/team/dr_kiran_wakchaure.jpg"
+              alt="Dr. Kiran Wakchaure Sir - Project Director, Sanjivani University"
               style="width: 100%; height: 100%; object-fit: cover; object-position: center top;" loading="lazy">
           </div>
           <div style="flex: 1; min-width: 250px;">
@@ -8108,7 +8183,9 @@
             <div style="font-size: 0.875rem; font-weight: 500; color: var(--accent-silver); margin-bottom: 8px;">
               Project Director • Sanjivani University</div>
             <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-              Providing strategic vision, academic mentorship, and research laboratory resources at Makerspace, Sanjivani University to foster cutting-edge bio-inspired robotics, additive manufacturing, and compliant continuum manipulation systems.
+              Providing strategic vision, academic mentorship, and research laboratory resources at Makerspace,
+              Sanjivani University to foster cutting-edge bio-inspired robotics, additive manufacturing, and compliant
+              continuum manipulation systems.
             </p>
           </div>
         </div>
@@ -8165,7 +8242,8 @@
           <ul class="footer-links">
             <li>
               <span style="color: var(--text-light); font-weight: 500;">Project Director:</span>
-              <div style="color: var(--text-muted); font-size: 0.8125rem;">Dr. Kiran Wakchaure Sir • Sanjivani University</div>
+              <div style="color: var(--text-muted); font-size: 0.8125rem;">Dr. Kiran Wakchaure Sir • Sanjivani
+                University</div>
             </li>
             <li style="margin-top: 10px;">
               <span style="color: var(--text-light); font-weight: 500;">Design Reference:</span>
@@ -8336,7 +8414,7 @@
           vid.muted = true;
           vid.volume = 0;
           vid.defaultMuted = true;
-          vid.play().catch(() => {});
+          vid.play().catch(() => { });
         }
       } else {
         if (vid) {
@@ -8850,8 +8928,8 @@
       allTypes.forEach(t => {
         const btn = document.getElementById('btnPayload' + t);
         if (btn) {
-          const match = (t.toLowerCase() === type.toLowerCase()) || 
-                        (t.toLowerCase() === 'sphere' && (type === 'egg' || type === 'sphere'));
+          const match = (t.toLowerCase() === type.toLowerCase()) ||
+            (t.toLowerCase() === 'sphere' && (type === 'egg' || type === 'sphere'));
           if (match) btn.classList.add('active');
           else btn.classList.remove('active');
         }
@@ -9590,14 +9668,19 @@
             metalness: 0.25
           }),
           vertebra: new THREE.MeshStandardMaterial({
-            color: 0x2b2e35,
-            roughness: 0.48,
-            metalness: 0.2
+            color: 0xf4f6f8, // Crisp white 3D-printed engineering polymer matching physical prototype photos
+            roughness: 0.32,
+            metalness: 0.08
           }),
           vertebraJoint: new THREE.MeshStandardMaterial({
-            color: 0x404550,
-            roughness: 0.35,
-            metalness: 0.35
+            color: 0xe2e8f0, // Interlocking limit stop facets & clevis jaws
+            roughness: 0.40,
+            metalness: 0.12
+          }),
+          tipPad: new THREE.MeshStandardMaterial({
+            color: 0x38bdf8, // Tactile conformal distal gripper pad
+            roughness: 0.45,
+            metalness: 0.20
           }),
           servoBody: new THREE.MeshStandardMaterial({
             color: 0x16171a,
@@ -10100,77 +10183,108 @@
         const tentacleRootGroup = new THREE.Group();
 
         function buildAttachedTentacle() {
-          const numSegments = 8;
-          let currentZ = 62.5; // Root attaches directly to clevis / Part 5 / Part 2 interface
+          const numSegments = 15; // Complete 15-segment continuum tentacle matching physical prototype & kinematic simulator
+          let currentZ = 62.5; // Root anchors directly to front clevis / Part 5 / Part 2 interface
 
           for (let i = 0; i < numSegments; i++) {
             const segGroup = new THREE.Group();
-            const scaleFactor = Math.pow(0.93, i); // Logarithmic continuum taper
+            
+            // Logarithmic spiral gradient taper: s from 1.0 down to ~0.42
+            const t = i / (numSegments - 1);
+            const scaleFactor = 1.0 - t * 0.58;
 
-            const spanW = 70 * scaleFactor;
-            const depthL = 20 * scaleFactor;
-            const heightH = 11 * scaleFactor;
+            const width = 28.0 * scaleFactor;
+            const height = 15.0 * scaleFactor;
+            const length = 11.5 * scaleFactor;
+            const eyeletPitch = 22.0 * scaleFactor;
 
-            // Vertebra Main Crossbar Frame
-            const bodyGeo = new THREE.BoxGeometry(spanW, heightH, depthL);
+            // 1. Vertebra Body Core (Clean White 3D-Printed Polymer)
+            const bodyGeo = new THREE.BoxGeometry(width, height, length);
             const bodyMesh = new THREE.Mesh(bodyGeo, mats.vertebra);
-            bodyMesh.position.set(0, 0, depthL / 2);
+            bodyMesh.position.set(0, 0, length / 2);
+            bodyMesh.castShadow = true;
+            bodyMesh.receiveShadow = true;
             segGroup.add(bodyMesh);
 
-            // Knuckle Clevis Interlocking Joint
-            const tongueGeo = new THREE.BoxGeometry(24 * scaleFactor, 5.2 * scaleFactor, 12 * scaleFactor);
+            // 2. Interlocking Limit Stop Facets (±18° Angular Wedges on Anterior/Posterior Faces)
+            const stopGeo = new THREE.BoxGeometry(width * 0.94, height * 0.88, 2.5 * scaleFactor);
+            const stopMesh = new THREE.Mesh(stopGeo, mats.vertebraJoint);
+            stopMesh.position.set(0, 0, 1.25 * scaleFactor);
+            segGroup.add(stopMesh);
+
+            // 3. Knuckle Clevis Tongue (Male Hinge Head projecting forward to next vertebra)
+            const tongueW = 8.0 * scaleFactor;
+            const tongueH = 7.0 * scaleFactor;
+            const tongueL = 6.5 * scaleFactor;
+            const tongueGeo = new THREE.BoxGeometry(tongueW, tongueH, tongueL);
             const tongueMesh = new THREE.Mesh(tongueGeo, mats.vertebraJoint);
-            tongueMesh.position.set(0, 0, depthL + 6 * scaleFactor);
+            tongueMesh.position.set(0, 0, length + tongueL / 2);
+            tongueMesh.castShadow = true;
             segGroup.add(tongueMesh);
 
-            // Brass Hinge Pivot Pin (Ø6mm)
-            const pinGeo = new THREE.CylinderGeometry(2.8 * scaleFactor, 2.8 * scaleFactor, 8 * scaleFactor, 16);
+            // Knuckle Tongue Rounded Hinge Nose
+            const noseGeo = new THREE.CylinderGeometry(tongueH / 2, tongueH / 2, tongueW, 12);
+            const noseMesh = new THREE.Mesh(noseGeo, mats.vertebraJoint);
+            noseMesh.rotation.z = Math.PI / 2;
+            noseMesh.position.set(0, 0, length + tongueL);
+            segGroup.add(noseMesh);
+
+            // 4. Brass Pivot Hinge Pin (Horizontal Transverse Axis along X)
+            const pinRadius = 1.4 * scaleFactor;
+            const pinLength = width * 0.78;
+            const pinGeo = new THREE.CylinderGeometry(pinRadius, pinRadius, pinLength, 14);
             const pinMesh = new THREE.Mesh(pinGeo, mats.brassSpline);
             pinMesh.rotation.z = Math.PI / 2;
-            pinMesh.position.set(0, 0, depthL + 6 * scaleFactor);
+            pinMesh.position.set(0, 0, length + tongueL * 0.65);
             segGroup.add(pinMesh);
 
-            // Dual Lateral Tendon Guide Eyelets @ 30mm scaled pitch
-            const eyeletPitch = 30 * scaleFactor;
-            const eyeletGeo = new THREE.TorusGeometry(3.0 * scaleFactor, 1.0 * scaleFactor, 8, 16);
+            // 5. Dual Lateral Tendon Guide Eyelets (Left and Right Flanks)
+            const eyeletR = 2.0 * scaleFactor;
+            const eyeletTube = 0.7 * scaleFactor;
+            const eyeletGeo = new THREE.TorusGeometry(eyeletR, eyeletTube, 8, 16);
+            
             const eyeletL = new THREE.Mesh(eyeletGeo, mats.vertebraJoint);
-            eyeletL.position.set(-eyeletPitch / 2, 0, depthL / 2);
-            const eyeletR = new THREE.Mesh(eyeletGeo, mats.vertebraJoint);
-            eyeletR.position.set(eyeletPitch / 2, 0, depthL / 2);
-            segGroup.add(eyeletL, eyeletR);
+            eyeletL.position.set(-eyeletPitch / 2, 0, length / 2);
+            eyeletL.rotation.y = Math.PI / 2;
 
-            // Flexure Strain Relief Notches
-            const notchGeo = new THREE.BoxGeometry(4 * scaleFactor, heightH + 0.5, 5 * scaleFactor);
-            const notchMat = new THREE.MeshBasicMaterial({ color: 0x0a0b0d });
-            const notchL = new THREE.Mesh(notchGeo, notchMat);
-            notchL.position.set(-eyeletPitch / 4, 0, depthL / 2);
-            const notchR = new THREE.Mesh(notchGeo, notchMat);
-            notchR.position.set(eyeletPitch / 4, 0, depthL / 2);
-            segGroup.add(notchL, notchR);
+            const eyeletRMesh = new THREE.Mesh(eyeletGeo, mats.vertebraJoint);
+            eyeletRMesh.position.set(eyeletPitch / 2, 0, length / 2);
+            eyeletRMesh.rotation.y = Math.PI / 2;
+            segGroup.add(eyeletL, eyeletRMesh);
 
-            // Distal Gripper Tip Feature on segment 7 (final tip)
+            // 6. Central Weight Relief Aperture / Flexure Core Slot
+            const cavityGeo = new THREE.BoxGeometry(width * 0.32, height * 0.52, length + 1);
+            const cavityMat = new THREE.MeshBasicMaterial({ color: 0x080a0e });
+            const cavityMesh = new THREE.Mesh(cavityGeo, cavityMat);
+            cavityMesh.position.set(0, 0, length / 2);
+            segGroup.add(cavityMesh);
+
+            // 7. Distal Gripper End-Effector on Segment 15 (Final Tip)
             if (i === numSegments - 1) {
-              const tipGeo = new THREE.BoxGeometry(spanW * 0.75, 5 * scaleFactor, 10 * scaleFactor);
-              const tipMesh = new THREE.Mesh(tipGeo, mats.brassSpline);
-              tipMesh.position.set(0, 0, depthL + 12 * scaleFactor);
+              const tipGeo = new THREE.SphereGeometry(width * 0.5, 16, 16);
+              const tipMesh = new THREE.Mesh(tipGeo, mats.tipPad);
+              tipMesh.scale.set(1.0, 0.75, 1.3);
+              tipMesh.position.set(0, 0, length + tongueL + 3.5 * scaleFactor);
+              tipMesh.castShadow = true;
               segGroup.add(tipMesh);
             }
 
-            // Segment position along spine
+            // Step positioning along longitudinal axis
+            const zStep = length + 4.5 * scaleFactor;
             segGroup.position.set(0, 10, currentZ);
-            currentZ += depthL + 7 * scaleFactor;
+            currentZ += zStep;
 
-            // Register segment
+            // Register vertebra in component inspector
             const segId = 'tentacle-seg' + (i + 1);
             registerComponent(segId, segGroup, {
-              name: 'Attached Vertebra Link ' + (i + 1) + ' of ' + numSegments,
-              file: 'SpiRob_Tentacle_85pct.SLDPRT',
-              role: 'Articulated continuum spine vertebra with knuckle clevis joint & flexure angle limiters',
-              dims: spanW.toFixed(1) + ' × ' + depthL.toFixed(1) + ' × ' + heightH.toFixed(1) + ' mm (' + Math.round(scaleFactor * 100) + '% Scale)',
-              material: 'High-Impact Copolymer / Elastic Polyurethane Living Hinge',
-              fasteners: 'Ø6.0mm Brass Pivot Pin, Dual Tendon Eyelets @ ' + eyeletPitch.toFixed(1) + 'mm Pitch',
-              explodeDir: [0, 4 * i, 14 * (i + 1)],
-              step: 7,
+              name: 'Vertebra Link ' + (i + 1) + ' of ' + numSegments,
+              file: 'SpiRob_Tentacle_15Seg.SLDPRT',
+              role: 'Articulated continuum spine vertebra with knuckle clevis joint, ±18° limit stops & lateral Dyneema eyelets',
+              dims: width.toFixed(1) + ' × ' + length.toFixed(1) + ' × ' + height.toFixed(1) + ' mm (' + Math.round(scaleFactor * 100) + '% Scale)',
+              material: '3D-Printed White PLA/PETG Polymer • Brass Pivot Dowel Pin',
+              fasteners: 'Ø2.8mm Brass Dowel Pin • Dual Lateral Tendon Eyelets @ ' + eyeletPitch.toFixed(1) + 'mm Pitch',
+              explodeDir: [0, 2.2 * i, 8 * (i + 1)],
+              step: 4,
               segmentIndex: i
             });
 
@@ -10181,20 +10295,20 @@
               baseZ: segGroup.position.z,
               baseY: segGroup.position.y,
               eyeletPitch: eyeletPitch,
-              depthL: depthL
+              depthL: length
             });
           }
 
-          // Also register complete attached tentacle in registry under 'part-tentacle'
+          // Register complete attached tentacle in registry under 'part-tentacle'
           registerComponent('part-tentacle', tentacleRootGroup, {
-            name: 'Attached Bio-Inspired Continuum Tentacle',
-            file: 'SpiRob_Tentacle_85pct.SLDPRT',
-            role: 'Complete 8-vertebra flexible continuum tentacle anchored to root clevis tongue with dual tendon force transmission',
-            dims: '70.00 × 210.00 × 14.00 mm',
-            material: '3D Printed Copolymer / Stainless Steel Core Tendons',
-            fasteners: 'Direct Root Clevis Mating @ Z=+62.5mm, Dual Tendon Eyelets @ 30mm Pitch',
-            explodeDir: [0, 20, 50],
-            step: 7
+            name: 'Attached 15-Segment Continuum Tentacle Spine',
+            file: 'SpiRob_Tentacle_15Seg.SLDPRT',
+            role: 'Bio-inspired 15-vertebra continuum spine with logarithmic spiral gradient, knuckle clevis joints, ±18° limit stops & dual Dyneema tendon lines',
+            dims: '28.00 × 165.00 × 15.00 mm (15 Articulated Vertebrae)',
+            material: '3D-Printed White PLA/PETG • Brass Pivot Pins • Dyneema Tendons',
+            fasteners: 'Direct Root Clevis Mating @ Z=+62.5mm • Dual Lateral Eyelets @ 22-9mm Pitch',
+            explodeDir: [0, 15, 45],
+            step: 4
           });
         }
 
@@ -10203,32 +10317,31 @@
         let cableAntagonistLine = null;
 
         function buildTendonCables() {
-          const maxPts = 16;
+          const maxPts = 32; // Accommodates base anchors + 15 vertebrae eyelets + tip
           const ptsL = new Float32Array(maxPts * 3);
           const ptsR = new Float32Array(maxPts * 3);
 
           const geoL = new THREE.BufferGeometry();
           geoL.setAttribute('position', new THREE.BufferAttribute(ptsL, 3));
-          const matL = new THREE.LineBasicMaterial({ color: 0xffffff, linewidth: 2 });
+          const matL = new THREE.LineBasicMaterial({ color: 0x38bdf8, linewidth: 2.5 });
           cableAgonistLine = new THREE.Line(geoL, matL);
           assemblyGroup.add(cableAgonistLine);
 
           const geoR = new THREE.BufferGeometry();
           geoR.setAttribute('position', new THREE.BufferAttribute(ptsR, 3));
-          const matR = new THREE.LineBasicMaterial({ color: 0xa1a1aa, linewidth: 2 });
+          const matR = new THREE.LineBasicMaterial({ color: 0x94a3b8, linewidth: 2.0 });
           cableAntagonistLine = new THREE.Line(geoR, matR);
           assemblyGroup.add(cableAntagonistLine);
 
           updateTendonCables(0);
         }
 
-        function updateTendonCables(curlAmount) {
+        function updateTendonCables(curlAngleRad) {
           if (!cableAgonistLine || !cableAntagonistLine) return;
 
           const posL = cableAgonistLine.geometry.attributes.position.array;
           const posR = cableAntagonistLine.geometry.attributes.position.array;
 
-          let idx = 0;
           function setPt(arr, i, x, y, z) {
             arr[i * 3] = x;
             arr[i * 3 + 1] = y;
@@ -10253,9 +10366,9 @@
 
           let ptCount = 4;
 
-          // Pts 4..11: Eyelets along each vertebra segment
+          // Eyelets along each vertebra segment
           vertebraeJoints.forEach(v => {
-            if (ptCount >= 16) return;
+            if (ptCount >= 32) return;
             const seg = v.group;
             const p = seg.position;
             const rotY = seg.rotation.y;
@@ -10264,10 +10377,10 @@
             const cosY = Math.cos(rotY);
             const sinY = Math.sin(rotY);
 
-            // Left eyelet (-halfP in local X) transformed to world coordinates
+            // Left eyelet in world coordinates
             const offLx = -halfP * cosY;
             const offLz = halfP * sinY;
-            // Right eyelet (+halfP in local X) transformed to world coordinates
+            // Right eyelet in world coordinates
             const offRx = halfP * cosY;
             const offRz = -halfP * sinY;
 
@@ -10284,13 +10397,59 @@
           const lastY_R = posR[(ptCount - 1) * 3 + 1];
           const lastZ_R = posR[(ptCount - 1) * 3 + 2];
 
-          for (let k = ptCount; k < 16; k++) {
+          for (let k = ptCount; k < 32; k++) {
             setPt(posL, k, lastX_L, lastY_L, lastZ_L);
             setPt(posR, k, lastX_R, lastY_R, lastZ_R);
           }
 
           cableAgonistLine.geometry.attributes.position.needsUpdate = true;
           cableAntagonistLine.geometry.attributes.position.needsUpdate = true;
+        }
+
+        // Kinematic Planar Curl Controller (Strictly Left & Right Horizontal Motion)
+        let targetCurlAngle = 0;
+        let currentCurlAngle = 0;
+
+        window.setCADTentacleCurl = function(angleDeg) {
+          targetCurlAngle = (angleDeg * Math.PI) / 180;
+        };
+
+        function updateTentacleKinematics() {
+          const diff = targetCurlAngle - currentCurlAngle;
+          if (Math.abs(diff) > 0.0005) {
+            currentCurlAngle += diff * 0.12;
+          } else {
+            currentCurlAngle = targetCurlAngle;
+          }
+
+          // If in exploded view, kinematics stays neutral so explosion occurs cleanly along datum axes
+          if (currentExplodeRatio > 0.02) {
+            vertebraeJoints.forEach(v => {
+              v.group.rotation.y = 0;
+            });
+            return;
+          }
+
+          let curX = 0;
+          const curY = 10;
+          let curZ = 62.5;
+          let accumulatedAngle = 0;
+
+          vertebraeJoints.forEach((v, i) => {
+            const t = i / (vertebraeJoints.length - 1);
+            const zStep = v.depthL + 4.5 * v.scaleFactor;
+            // Logarithmic continuum curvature: distal segments bend more easily than proximal base
+            const jointDelta = (currentCurlAngle / vertebraeJoints.length) * (0.4 + 1.2 * t);
+            accumulatedAngle += jointDelta;
+
+            v.group.position.set(curX, curY, curZ);
+            v.group.rotation.y = -accumulatedAngle;
+
+            curX += Math.sin(accumulatedAngle) * zStep;
+            curZ += Math.cos(accumulatedAngle) * zStep;
+          });
+
+          updateTendonCables(currentCurlAngle);
         }
 
         // =========================================================================
@@ -10660,7 +10819,20 @@
         // Bottom Subcontrol Trays Toggle Mechanism
         const explodeTray = document.getElementById('cadExplodeTray');
         const animTray = document.getElementById('cadAnimTray');
-        
+        const curlTray = document.getElementById('cadCurlTray');
+        const curlSlider = document.getElementById('cadCurlSlider');
+        const curlVal = document.getElementById('cadCurlVal');
+
+        if (curlSlider) {
+          curlSlider.addEventListener('input', (e) => {
+            const deg = parseFloat(e.target.value) || 0;
+            if (curlVal) curlVal.textContent = (deg > 0 ? '+' : '') + deg + '°' + (deg === 0 ? ' (Neutral)' : (deg > 0 ? ' (Right)' : ' (Left)'));
+            if (typeof window.setCADTentacleCurl === 'function') {
+              window.setCADTentacleCurl(deg);
+            }
+          });
+        }
+
         // Bottom Mode Deck Tabs (Assembled, Exploded, Sequence, Curl)
         document.querySelectorAll('.cad-mode-pills .cad-mode-btn').forEach(btn => {
           btn.addEventListener('click', function () {
@@ -10672,25 +10844,44 @@
             // Hide all trays by default
             if (explodeTray) explodeTray.classList.add('cad-tray-hidden');
             if (animTray) animTray.classList.add('cad-tray-hidden');
-            
+            if (curlTray) curlTray.classList.add('cad-tray-hidden');
+
             if (mode === 'assembled') {
               pauseAssemblyAnim();
               applyAssemblyStep(7);
               setExplodeRatio(0);
-                            if (explodeSlider) { explodeSlider.value = 0; if (explodeVal) explodeVal.textContent = '0%'; }
-                          } else if (mode === 'exploded') {
+              if (explodeSlider) { explodeSlider.value = 0; if (explodeVal) explodeVal.textContent = '0%'; }
+              if (typeof window.setCADTentacleCurl === 'function') window.setCADTentacleCurl(0);
+              if (curlSlider) curlSlider.value = 0;
+              if (curlVal) curlVal.textContent = '0° (Neutral)';
+            } else if (mode === 'exploded') {
               pauseAssemblyAnim();
               applyAssemblyStep(7);
+              if (typeof window.setCADTentacleCurl === 'function') window.setCADTentacleCurl(0);
+              if (curlSlider) curlSlider.value = 0;
+              if (curlVal) curlVal.textContent = '0° (Neutral)';
               if (explodeTray) explodeTray.classList.remove('cad-tray-hidden');
               const val = explodeSlider ? parseInt(explodeSlider.value, 10) || 65 : 65;
               if (explodeSlider) explodeSlider.value = val;
               if (explodeVal) explodeVal.textContent = val + '%';
               setExplodeRatio(val / 100);
             } else if (mode === 'sequence') {
-              if (animTray) animTray.classList.remove('cad-tray-hidden');
               setExplodeRatio(0);
-              
+              if (typeof window.setCADTentacleCurl === 'function') window.setCADTentacleCurl(0);
+              if (curlSlider) curlSlider.value = 0;
+              if (curlVal) curlVal.textContent = '0° (Neutral)';
+              if (animTray) animTray.classList.remove('cad-tray-hidden');
               playAssemblyAnim();
+            } else if (mode === 'curl') {
+              pauseAssemblyAnim();
+              applyAssemblyStep(7);
+              setExplodeRatio(0);
+              if (explodeSlider) { explodeSlider.value = 0; if (explodeVal) explodeVal.textContent = '0%'; }
+              if (curlTray) curlTray.classList.remove('cad-tray-hidden');
+              const curDeg = curlSlider ? parseFloat(curlSlider.value) || 55 : 55;
+              if (curlSlider) curlSlider.value = curDeg;
+              if (curlVal) curlVal.textContent = '+' + curDeg + '° (Right)';
+              if (typeof window.setCADTentacleCurl === 'function') window.setCADTentacleCurl(curDeg);
             }
           });
         });
@@ -10850,7 +11041,10 @@
           try {
             if (controls) controls.update();
             updateExplodedPositions();
-                        renderer.render(scene, camera);
+            if (currentExplodeRatio < 0.02 && typeof updateTentacleKinematics === 'function') {
+              updateTentacleKinematics();
+            }
+            renderer.render(scene, camera);
           } catch (err) {
             console.error('Render loop error caught:', err);
           }
@@ -10967,7 +11161,7 @@
       }
     })();
 
-  
+
 
     // =========================================================================
     // ABSOLUTE PERMANENT VIDEO MUTE ENFORCER (ZERO UNMUTE OPTION)
@@ -10979,20 +11173,20 @@
           if (!proto) return;
           try {
             Object.defineProperty(proto, 'volume', {
-              get: function() { return 0; },
-              set: function() {},
+              get: function () { return 0; },
+              set: function () { },
               configurable: true
             });
             Object.defineProperty(proto, 'muted', {
-              get: function() { return true; },
-              set: function() {},
+              get: function () { return true; },
+              set: function () { },
               configurable: true
             });
-          } catch(e) {}
+          } catch (e) { }
         };
         if (typeof HTMLVideoElement !== 'undefined') lockProps(HTMLVideoElement.prototype);
         if (typeof HTMLMediaElement !== 'undefined') lockProps(HTMLMediaElement.prototype);
-      } catch(e) {}
+      } catch (e) { }
 
       // 2. Direct DOM video element locking
       function lockVideo(vid) {
@@ -11009,15 +11203,15 @@
               vid.audioTracks[i].enabled = false;
             }
           }
-          vid.onvolumechange = function() {
+          vid.onvolumechange = function () {
             vid.muted = true;
             vid.volume = 0;
           };
-          vid.addEventListener('volumechange', function() {
+          vid.addEventListener('volumechange', function () {
             vid.muted = true;
             vid.volume = 0;
           }, { passive: true });
-        } catch(e) {}
+        } catch (e) { }
       }
 
       function lockAllMedia() {
@@ -11032,17 +11226,16 @@
 
       // 3. Continuous mutation observer to lock dynamically added video tags
       try {
-        const observer = new MutationObserver(function() {
+        const observer = new MutationObserver(function () {
           lockAllMedia();
         });
         if (document.body) {
           observer.observe(document.body, { childList: true, subtree: true });
         }
-      } catch(e) {}
+      } catch (e) { }
     })();
 
-</script>
-
+  </script>
   <script id="insideSpirobeWorkbenchScript">
     /* =========================================================================
        INSIDE SPIROBE: 3D CAD FEATURE WORKBENCH & VISUAL ARCHIVE ENGINE
@@ -15709,7 +15902,7 @@
     }
 
 
-  
+
     // =========================================================================
     // ABSOLUTE PERMANENT VIDEO MUTE ENFORCER (ZERO UNMUTE OPTION)
     // =========================================================================
@@ -15720,20 +15913,20 @@
           if (!proto) return;
           try {
             Object.defineProperty(proto, 'volume', {
-              get: function() { return 0; },
-              set: function() {},
+              get: function () { return 0; },
+              set: function () { },
               configurable: true
             });
             Object.defineProperty(proto, 'muted', {
-              get: function() { return true; },
-              set: function() {},
+              get: function () { return true; },
+              set: function () { },
               configurable: true
             });
-          } catch(e) {}
+          } catch (e) { }
         };
         if (typeof HTMLVideoElement !== 'undefined') lockProps(HTMLVideoElement.prototype);
         if (typeof HTMLMediaElement !== 'undefined') lockProps(HTMLMediaElement.prototype);
-      } catch(e) {}
+      } catch (e) { }
 
       // 2. Direct DOM video element locking
       function lockVideo(vid) {
@@ -15750,15 +15943,15 @@
               vid.audioTracks[i].enabled = false;
             }
           }
-          vid.onvolumechange = function() {
+          vid.onvolumechange = function () {
             vid.muted = true;
             vid.volume = 0;
           };
-          vid.addEventListener('volumechange', function() {
+          vid.addEventListener('volumechange', function () {
             vid.muted = true;
             vid.volume = 0;
           }, { passive: true });
-        } catch(e) {}
+        } catch (e) { }
       }
 
       function lockAllMedia() {
@@ -15773,13 +15966,13 @@
 
       // 3. Continuous mutation observer to lock dynamically added video tags
       try {
-        const observer = new MutationObserver(function() {
+        const observer = new MutationObserver(function () {
           lockAllMedia();
         });
         if (document.body) {
           observer.observe(document.body, { childList: true, subtree: true });
         }
-      } catch(e) {}
+      } catch (e) { }
     })();
 
   </script>
@@ -15790,12 +15983,16 @@
       <button class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Close modal">✕</button>
       <div class="lightbox-media">
         <img id="lightboxImg" src="" alt="Enlarged view" style="display: block;">
-        <video id="lightboxVideo" autoplay loop muted playsinline disablepictureinpicture disableremoteplayback style="display: none; max-width: 100%; max-height: 480px; object-fit: contain;"></video>
+        <video id="lightboxVideo" autoplay loop muted playsinline disablepictureinpicture disableremoteplayback
+          style="display: none; max-width: 100%; max-height: 480px; object-fit: contain;"></video>
       </div>
       <div class="lightbox-details">
         <div>
-          <div id="lightboxTitle" style="font-weight: 600; font-size: 1rem; color: var(--text-primary); margin-bottom: 4px;"></div>
-          <div id="lightboxTag" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;"></div>
+          <div id="lightboxTitle"
+            style="font-weight: 600; font-size: 1rem; color: var(--text-primary); margin-bottom: 4px;"></div>
+          <div id="lightboxTag"
+            style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">
+          </div>
         </div>
       </div>
     </div>

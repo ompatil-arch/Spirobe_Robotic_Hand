@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#080D18"/>
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050505"/>
+      <stop offset="100%" stop-color="#0e1726"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="350" fill="url(#skyGrad)"/>
+  <!-- Technical Grid -->
+  <path d="M0 50 H800 M0 100 H800 M0 150 H800 M0 200 H800 M0 250 H800 M0 300 H800" stroke="#121826" stroke-width="1"/>
+  <!-- Futuristic Engineering Campus Silhouette -->
+  <polygon points="40,350 40,240 120,240 120,350" fill="#121826" stroke="#e4e4e7" stroke-width="1"/>
+  <polygon points="120,350 120,180 260,180 260,350" fill="#182236" stroke="#e4e4e7" stroke-width="1.5"/>
+  <polygon points="260,350 260,120 540,120 540,350" fill="#1e2c47" stroke="#e4e4e7" stroke-width="2"/>
+  <polygon points="540,350 540,200 680,200 680,350" fill="#182236" stroke="#e4e4e7" stroke-width="1.5"/>
+  <polygon points="680,350 680,260 760,260 760,350" fill="#121826" stroke="#e4e4e7" stroke-width="1"/>
+  <!-- Windows Matrix -->
+  <g fill="#e4e4e7" fill-opacity="0.3">
+    <rect x="290" y="150" width="20" height="15" rx="2"/>
+    <rect x="330" y="150" width="20" height="15" rx="2"/>
+    <rect x="370" y="150" width="20" height="15" rx="2"/>
+    <rect x="410" y="150" width="20" height="15" rx="2"/>
+    <rect x="450" y="150" width="20" height="15" rx="2"/>
+    <rect x="490" y="150" width="20" height="15" rx="2"/>
+    <rect x="290" y="180" width="20" height="15" rx="2"/>
+    <rect x="330" y="180" width="20" height="15" rx="2"/>
+    <rect x="370" y="180" width="20" height="15" rx="2"/>
+    <rect x="410" y="180" width="20" height="15" rx="2"/>
+    <rect x="450" y="180" width="20" height="15" rx="2"/>
+    <rect x="490" y="180" width="20" height="15" rx="2"/>
+  </g>
+  <!-- Makerspace Lab Glow Sign -->
+  <rect x="320" y="240" width="160" height="40" rx="4" fill="#080D18" stroke="#e4e4e7" stroke-width="1.5"/>
+  <text x="400" y="264" fill="#e4e4e7" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">MAKERSPACE LAB</text>
+  <!-- Foreground ground line -->
+  <line x1="0" y1="350" x2="800" y2="350" stroke="#e4e4e7" stroke-width="2"/>
+  <rect x="0" y="350" width="800" height="100" fill="#080D18"/>
+  <text x="400" y="400" fill="#E2E8F0" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">SANJIVANI UNIVERSITY CAMPUS</text>
+  <text x="400" y="425" fill="#94A3B8" font-family="monospace" font-size="12" text-anchor="middle">[ REPLACE: /images/university/campus.jpg ]</text>
+</svg>

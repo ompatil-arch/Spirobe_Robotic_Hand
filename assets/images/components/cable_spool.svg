@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" fill="none">
+    <rect width="320" height="240" rx="12" fill="#080D18" stroke="#1e293b" stroke-width="1.5"/>
+    <rect x="8" y="8" width="304" height="224" rx="8" stroke="#e4e4e7" stroke-width="1" stroke-opacity="0.2"/>
+    <path d="M14 24 V14 H24 M306 24 V14 H296 M14 216 V226 H24 M306 216 V226 H296" stroke="#e4e4e7" stroke-width="1.5"/>
+    <!-- Technical schematic representation -->
+    <circle cx="160" cy="110" r="55" fill="#121826" stroke="#d4d4d8" stroke-width="1.5" stroke-dasharray="4 2"/>
+    <path d="M 120 100 L 200 100 L 200 130 L 170 130 L 170 170 L 200 170 L 200 200 L 120 200 Z" fill="#182236" stroke="#e4e4e7" stroke-width="2"/>
+    <rect x="85" y="185" width="150" height="22" rx="4" fill="#121826" stroke="#e4e4e7" stroke-width="1"/>
+    <text x="160" y="200" fill="#e4e4e7" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle" letter-spacing="1">TRANSMISSION</text>
+    <text x="160" y="45" fill="#E2E8F0" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle">Precision Motor Spool</text>
+  </svg>

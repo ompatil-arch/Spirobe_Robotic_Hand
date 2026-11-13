@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+    <rect width="600" height="400" rx="8" fill="#080D18" stroke="#121826" stroke-width="2"/>
+    <!-- Grid -->
+    <path d="M0 80 H600 M0 160 H600 M0 240 H600 M0 320 H600" stroke="#121826" stroke-width="1"/>
+    <path d="M120 0 V400 M240 0 V400 M360 0 V400 M480 0 V400" stroke="#121826" stroke-width="1"/>
+    <rect x="15" y="15" width="570" height="370" rx="6" stroke="#e4e4e7" stroke-width="1" stroke-opacity="0.3"/>
+    <!-- Graphic Symbol -->
+    <circle cx="300" cy="180" r="75" fill="#121826" stroke="#e4e4e7" stroke-width="2"/>
+    <path d="M260 180 C 270 140, 330 140, 340 180 C 350 220, 290 220, 300 240" fill="none" stroke="#d4d4d8" stroke-width="4" stroke-linecap="round"/>
+    <!-- Caption Tag -->
+    <rect x="150" y="280" width="300" height="36" rx="6" fill="#050505" stroke="#e4e4e7" stroke-width="1"/>
+    <text x="300" y="303" fill="#e4e4e7" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" letter-spacing="1">CAD BASE RENDER</text>
+    <text x="300" y="350" fill="#94A3B8" font-family="sans-serif" font-size="12" text-anchor="middle">SPIROBE Makerspace Lab Archive</text>
+  </svg>

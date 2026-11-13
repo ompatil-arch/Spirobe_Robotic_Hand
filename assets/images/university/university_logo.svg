@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" fill="none">
+  <rect width="300" height="300" rx="20" fill="#080D18" stroke="#e4e4e7" stroke-width="1.5"/>
+  <circle cx="150" cy="150" r="110" stroke="#e4e4e7" stroke-width="2" stroke-dasharray="6 4"/>
+  <circle cx="150" cy="150" r="90" fill="#121826" stroke="#d4d4d8" stroke-width="2"/>
+  <!-- University Crest Gear -->
+  <path d="M150 75 L155 88 L168 85 L170 98 L183 98 L181 111 L193 115 L188 127 L198 135 L190 145 L198 155 L188 163 L193 175 L181 179 L183 192 L170 192 L168 205 L155 202 L150 215 L145 202 L132 205 L130 192 L117 192 L119 179 L107 175 L112 163 L102 155 L110 145 L102 135 L112 127 L107 115 L119 111 L117 98 L130 98 L132 85 L145 88 Z" fill="#e4e4e7" fill-opacity="0.15" stroke="#e4e4e7" stroke-width="1.5"/>
+  <!-- Graduation / Knowledge Torch Symbol -->
+  <path d="M125 140 L150 115 L175 140 L150 165 Z" fill="#d4d4d8" stroke="#e4e4e7" stroke-width="1.5"/>
+  <circle cx="150" cy="140" r="8" fill="#e4e4e7"/>
+  <text x="150" y="240" fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" letter-spacing="1">SANJIVANI UNIVERSITY</text>
+  <text x="150" y="260" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="middle">MAKERSPACE INNOVATION LAB</text>
+</svg>

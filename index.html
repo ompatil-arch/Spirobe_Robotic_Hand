@@ -4837,9 +4837,39 @@
       font-weight: 700;
     }
 
+    
+    .hero-validation-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      padding: 5px 12px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 12px auto 16px;
+    }
+
+    .proto-grasp-showcase {
+      margin-top: 18px;
+      margin-bottom: 24px;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(17, 20, 28, 0.94) 0%, rgba(11, 14, 20, 0.98) 100%);
+      border: 1px solid rgba(56, 189, 248, 0.22);
+      border-radius: var(--radius-md);
+      padding: 22px 24px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      text-align: left;
+    }
+
     .proto-grasp-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 16px;
     }
 
@@ -5252,7 +5282,7 @@
 
     @media (max-width: 992px) {
       .proto-grasp-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
       }
       .trouble-grid {
         grid-template-columns: 1fr;
@@ -5364,106 +5394,94 @@
           </div>
           <h1 class="hero-title">SPIROBE</h1>
           <h2 class="hero-subtitle">Bio-Inspired Robotic Tentacle</h2>
-          <p class="hero-desc" style="max-width: 720px; margin: 0 auto 28px;">
-            An innovative cable-driven robotic system inspired by the flexibility, movement, and grasping capabilities
-            of an octopus tentacle.
-          </p>
-          <div class="hero-actions" style="justify-content: center; margin-bottom: 36px;">
-            <a href="#about" class="btn btn-primary">Explore Project</a>
-            <a href="#principle" class="btn btn-secondary">View Working Principle</a>
+          
+          <div style="display: flex; justify-content: center;">
+            <div class="hero-validation-pill">
+              <span class="proto-live-dot"></span> Empirical Physical Prototype Validation • Multi-Geometry Continuum Grasping
+            </div>
           </div>
 
-          
-          <!-- Empirical Physical Prototype Validation Showcase -->
+          <p class="hero-desc" style="max-width: 760px; margin: 0 auto 20px;">
+            An underactuated 15-vertebra biomimetic continuum manipulator inspired by octopus muscular hydrostats.
+            Laboratory bench testing demonstrates passive shape adaptation across planar, spherical, and asymmetrical complex payloads without sensor feedback.
+          </p>
+
+          <!-- Empirical Physical Prototype Validation: 3 Multi-Geometry Bench Tests -->
           <div class="proto-grasp-showcase">
             <div class="proto-grasp-header">
               <div class="proto-grasp-title-block">
-                <div class="proto-grasp-eyebrow">
-                  <span class="proto-live-dot"></span> Empirical Physical Prototype Validation
-                </div>
-                <h3 class="proto-grasp-title">Continuum Grasp & 95g Payload Cantilever Hold</h3>
+                <h3 class="proto-grasp-title" style="font-size: 1.0625rem; display: flex; align-items: center; gap: 8px;">
+                  <span style="color: #38bdf8;">Empirical Test Triad:</span> Passive Shape Adaptation Across Complex Geometries
+                </h3>
                 <p class="proto-grasp-desc">
-                  Laboratory bench verification of the 3D-printed SPIROBE prototype executing an underactuated planar wrap
-                  around an asymmetrical 95g optical mouse, achieving stable mid-air cantilever suspension off the workbench edge.
+                  Three benchmark physical tests demonstrating the continuum spine conforming to orthogonal box corners, spherical curvature, and ergonomic contours under tension.
                 </p>
               </div>
               <div class="proto-grasp-tags">
-                <div class="proto-tag">Payload: <strong>~95g (Optical Mouse)</strong></div>
-                <div class="proto-tag">Envelope: <strong>360° Planar Wrap</strong></div>
-                <div class="proto-tag">Contact: <strong>11 / 15 Vertebrae</strong></div>
+                <div class="proto-tag">Objects: <strong>3 Geometric Classes</strong></div>
+                <div class="proto-tag">Actuation: <strong>Dual N20 Tendons</strong></div>
                 <div class="proto-tag proto-tag-pass">PASS • ZERO SLIP</div>
               </div>
             </div>
 
             <div class="proto-grasp-grid">
-              <!-- View 1: Top-Down Planar 360 Wrap -->
+              <!-- Photo 1: Asymmetrical Complex Contour (Mouse) -->
               <div class="proto-grasp-card"
-                onclick="openPhotoViewer('assets/spirobe_grasp_pro_top_wrap.jpg', 'Empirical Physical Test — 360° Planar Wrap', 'High-angle perspective showing full 15-vertebra continuum enclosure around a 95g optical mouse with zero slip.')">
+                onclick="openPhotoViewer('assets/spirobe_grasp_pro_kinematics.jpg', 'Empirical Physical Test — Asymmetrical Ergonomic Wrap', 'Eye-level cantilever perspective showing full 15-vertebra continuum enclosure around an asymmetrical 95g optical mouse.')">
                 <div class="proto-grasp-thumb">
-                  <img src="assets/spirobe_grasp_pro_top_wrap.jpg" alt="SPIROBE 360 Degree Planar Grasp Enclosure" loading="lazy">
+                  <img src="assets/spirobe_grasp_pro_kinematics.jpg" alt="SPIROBE Kinematic Facet Joint Interlock Grasping Mouse" loading="lazy">
                   <div class="proto-thumb-overlay">
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
                   </div>
-                  <div class="proto-view-badge">View A • 360° Wrap</div>
+                  <div class="proto-view-badge">Test 01 • Asymmetrical Wrap</div>
                 </div>
                 <div class="proto-grasp-body">
-                  <div class="proto-card-title">Full 360° Biomimetic Wrap</div>
-                  <div class="proto-card-desc">11-vertebra planar contact conforming passively around the asymmetrical ergonomic mouse without external sensors.</div>
-                  <div class="proto-card-metric"><span>Grasp Envelope</span> <span>360° Planar Wrap</span></div>
+                  <div class="proto-card-title">Asymmetrical Ergonomic Wrap</div>
+                  <div class="proto-card-desc">Horizontal cantilever holding a 95g optical mouse in mid-air past the desk edge with articulated knuckle joint limit stops.</div>
+                  <div class="proto-card-metric"><span>Payload: Optical Mouse</span> <span>95g • PASS</span></div>
                 </div>
               </div>
 
-              <!-- View 2: Side Elevation Cantilever Hold -->
+              <!-- Photo 2: Prismatic Planar Facets (Wooden Box) -->
               <div class="proto-grasp-card"
-                onclick="openPhotoViewer('assets/spirobe_grasp_pro_side_cantilever.jpg', 'Empirical Physical Test — Off-Edge Cantilever Hold', 'Side profile demonstrating horizontal cantilever holding a 95g load suspended in free air beyond desk edge.')">
+                onclick="openPhotoViewer('assets/spirobe_grasp_pro_box.jpg', 'Empirical Physical Test — Prismatic Rectangular Wrap', 'Top-down perspective showing the 15-vertebra continuum spine conforming to the orthogonal 90-degree corners of a laser-cut wooden box.')">
                 <div class="proto-grasp-thumb">
-                  <img src="assets/spirobe_grasp_pro_side_cantilever.jpg" alt="SPIROBE Horizontal Cantilever Hold Off-Edge" loading="lazy">
+                  <img src="assets/spirobe_grasp_pro_box.jpg" alt="SPIROBE Prismatic Rectangular Grasp on Wooden Box" loading="lazy">
                   <div class="proto-thumb-overlay">
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
                   </div>
-                  <div class="proto-view-badge">View B • Cantilever</div>
+                  <div class="proto-view-badge">Test 02 • Prismatic Wrap</div>
                 </div>
                 <div class="proto-grasp-body">
-                  <div class="proto-card-title">Horizontal Cantilever Hold</div>
-                  <div class="proto-card-desc">Underactuated continuum tentacle holding 95g payload suspended in mid-air past the workbench edge with minimal deflection.</div>
-                  <div class="proto-card-metric"><span>Joint Sag</span> <span>Nominal (&lt;2°)</span></div>
+                  <div class="proto-card-title">Prismatic Rectangular Enclosure</div>
+                  <div class="proto-card-desc">15-vertebra spine wrapping around orthogonal 90° planar facets of a laser-cut box with continuous multi-point contact.</div>
+                  <div class="proto-card-metric"><span>Payload: Wooden Box</span> <span>Planar Wrap • PASS</span></div>
                 </div>
               </div>
 
-              <!-- View 3: Kinematic Interlock & Facet Detail -->
+              <!-- Photo 3: Continuous Spherical Curvature (3D Dome) -->
               <div class="proto-grasp-card"
-                onclick="openPhotoViewer('assets/spirobe_grasp_pro_kinematics.jpg', 'Empirical Physical Test — Articulated Kinematics', 'Table-level perspective showing how articulated knuckle clevis joints and facet limit stops prevent torsional sag.')">
+                onclick="openPhotoViewer('assets/spirobe_grasp_green_sphere.webp', 'Empirical Physical Test — Spherical Curvature Grip', 'Perspective view showing the continuum spine wrapping circumferentially around a textured 3D-printed sphere.')">
                 <div class="proto-grasp-thumb">
-                  <img src="assets/spirobe_grasp_pro_kinematics.jpg" alt="SPIROBE Kinematic Facet Joint Interlock" loading="lazy">
+                  <img src="assets/spirobe_grasp_green_sphere.webp" alt="SPIROBE Circumferential Grasp on 3D Printed Sphere" loading="lazy">
                   <div class="proto-thumb-overlay">
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
                   </div>
-                  <div class="proto-view-badge">View C • Kinematics</div>
+                  <div class="proto-view-badge">Test 03 • Spherical Wrap</div>
                 </div>
                 <div class="proto-grasp-body">
-                  <div class="proto-card-title">Vertebra Joint Conformance</div>
-                  <div class="proto-card-desc">Logarithmic vertebrae facet joints mechanically interlock to prevent out-of-plane torsional twist and sagging.</div>
-                  <div class="proto-card-metric"><span>Facet Stops</span> <span>15 Clevis Joints</span></div>
+                  <div class="proto-card-title">Spherical Curvature Grip</div>
+                  <div class="proto-card-desc">Circumferential spiral grip conforming to a textured convex dome with distributed radial holding pressure.</div>
+                  <div class="proto-card-metric"><span>Payload: 3D Dome</span> <span>360° Wrap • PASS</span></div>
                 </div>
               </div>
-
-              <!-- View 4: Drive Train & Tendon Tension Deck -->
-              <div class="proto-grasp-card"
-                onclick="openPhotoViewer('assets/spirobe_grasp_pro_drive_deck.jpg', 'Empirical Physical Test — Actuator Deck & Winch', 'Drive train perspective showing dual N20 gearmotors, spool winches, Dyneema lines, L298N driver, and ESP32.')">
-                <div class="proto-grasp-thumb">
-                  <img src="assets/spirobe_grasp_pro_drive_deck.jpg" alt="SPIROBE Actuator Deck and Tendon Winch" loading="lazy">
-                  <div class="proto-thumb-overlay">
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
-                  </div>
-                  <div class="proto-view-badge">View D • Drive Deck</div>
-                </div>
-                <div class="proto-grasp-body">
-                  <div class="proto-card-title">Tendon Tension & Motor Deck</div>
-                  <div class="proto-card-desc">Dual micro N20 DC gearmotors with high-tensile Dyneema lines locked in agonist-antagonist tension equilibrium.</div>
-                  <div class="proto-card-metric"><span>Tendon Tension</span> <span>14.2 N Static</span></div>
-                </div>
-              </div></div>
+            </div>
           </div>
+
+          <div class="hero-actions" style="justify-content: center; margin-top: 12px; gap: 14px;">
+            <a href="#about" class="btn btn-primary">Explore Project</a>
+            <a href="#principle" class="btn btn-secondary">View Working Principle</a>
+            <a href="#troubleshooting" class="btn btn-secondary" style="border-color: rgba(245, 158, 11, 0.4); color: #f59e0b;">Troubleshooting Analysis</a>
           </div>
         </div>
       </div>

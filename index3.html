@@ -5320,10 +5320,70 @@
 
     .bambu-intro-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1.35fr 0.85fr;
       gap: 28px;
       margin-bottom: 48px;
       align-items: stretch;
+    }
+
+    .bambu-about-layout {
+      display: grid;
+      grid-template-columns: 1fr 210px;
+      gap: 20px;
+      align-items: stretch;
+      flex-grow: 1;
+    }
+
+    .bambu-about-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bambu-about-media {
+      position: relative;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #080a0f;
+      cursor: pointer;
+      min-height: 250px;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .bambu-about-media:hover {
+      border-color: #38bdf8;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 16px rgba(56, 189, 248, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .bambu-about-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      transition: transform 0.35s ease;
+      display: block;
+    }
+
+    .bambu-about-media:hover img {
+      transform: scale(1.05);
+    }
+
+    .bambu-media-badge {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      background: rgba(10, 14, 22, 0.9);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-radius: 4px;
+      padding: 3px 7px;
+      font-family: var(--font-mono);
+      font-size: 0.5625rem;
+      font-weight: 700;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
     .bambu-card {
@@ -5624,9 +5684,19 @@
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1100px) {
       .bambu-intro-grid {
         grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .bambu-about-layout {
+        grid-template-columns: 1fr;
+      }
+      .bambu-about-media {
+        min-height: 220px;
+        max-height: 300px;
       }
       .bambu-workflow-grid {
         grid-template-columns: 1fr;
@@ -7473,22 +7543,36 @@
           <!-- 1. About Bambu Lab A1 mini -->
           <div class="bambu-card">
             <h3 class="bambu-card-title">1. About Bambu Lab A1 mini</h3>
-            <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px;">
-              The <strong>Bambu Lab A1 mini</strong> is a desktop Fused Deposition Modelling (FDM) 3D printer engineered for
-              precision prototyping in academic makerspaces and robotics research laboratories. Utilizing an all-metal hotend
-              and high-performance core architecture, it achieves rapid print speeds of up to 500 mm/s while maintaining tight
-              geometric tolerances required for interlocking mechanical mechanisms.
-            </p>
-            <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 18px;">
-              The system features fully automated sensor-based calibration, including high-frequency eddy-current Flow Dynamics
-              Calibration and multi-point automated bed levelling. This automation ensures repeatable first-layer adhesion,
-              consistent volumetric extrusion, and dimensional accuracy for functional components such as the SPIROBE
-              chassis enclosure, spool drums, and articulated vertebrae.
-            </p>
-            <div style="margin-top: auto; display: flex; gap: 8px; flex-wrap: wrap;">
-              <span class="proto-tag">High-Speed FDM • <strong>500 mm/s</strong></span>
-              <span class="proto-tag">Automated Bed Levelling • <strong>Active Probe</strong></span>
-              <span class="proto-tag">Flow Dynamics • <strong>Eddy Current</strong></span>
+            <div class="bambu-about-layout">
+              <div class="bambu-about-text">
+                <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px;">
+                  The <strong>Bambu Lab A1 mini</strong> is a desktop Fused Deposition Modelling (FDM) 3D printer engineered for
+                  precision prototyping in academic makerspaces and robotics research laboratories. Utilizing an all-metal hotend
+                  and high-performance core architecture, it achieves rapid print speeds of up to 500 mm/s while maintaining tight
+                  geometric tolerances required for interlocking mechanical mechanisms.
+                </p>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 18px;">
+                  The system features fully automated sensor-based calibration, including high-frequency eddy-current Flow Dynamics
+                  Calibration and multi-point automated bed levelling. This automation ensures repeatable first-layer adhesion,
+                  consistent volumetric extrusion, and dimensional accuracy for functional components such as the SPIROBE
+                  chassis enclosure, spool drums, and articulated vertebrae.
+                </p>
+                <div style="margin-top: auto; display: flex; gap: 8px; flex-wrap: wrap;">
+                  <span class="proto-tag">High-Speed FDM • <strong>500 mm/s</strong></span>
+                  <span class="proto-tag">Automated Bed Levelling • <strong>Active Probe</strong></span>
+                  <span class="proto-tag">Flow Dynamics • <strong>Eddy Current</strong></span>
+                </div>
+              </div>
+              <div class="bambu-about-media"
+                onclick="openPhotoViewer('assets/images/bambu/bambu_lab_a1_mini_hardware.jpg', 'Bambu Lab A1 mini — Physical Hardware Bench', 'Physical Bambu Lab A1 mini 3D printer setup at Sanjivani University Makerspace.')"
+                title="Click to Inspect in High-Res Lightbox">
+                <img src="assets/images/bambu/bambu_lab_a1_mini_hardware.jpg"
+                  alt="Bambu Lab A1 mini 3D Printer at Sanjivani University Makerspace" loading="lazy">
+                <div class="bambu-media-badge">Makerspace Hardware Bench</div>
+                <div class="proto-thumb-overlay">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
+                </div>
+              </div>
             </div>
           </div>
 

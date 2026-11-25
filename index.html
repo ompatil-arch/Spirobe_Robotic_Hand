@@ -5709,6 +5709,307 @@
       }
     }
 
+
+    /* Physical Printing Fabrication Block & Process */
+    .bambu-fabrication-block {
+      background: linear-gradient(180deg, #0e121b 0%, #0a0d14 100%);
+      border: 1px solid rgba(56, 189, 248, 0.22);
+      border-radius: var(--radius-md);
+      padding: 32px 30px;
+      margin-bottom: 44px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), 0 0 24px rgba(56, 189, 248, 0.06);
+    }
+
+    .bambu-fab-header {
+      margin-bottom: 26px;
+    }
+
+    .bambu-fab-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+    }
+
+    .bambu-pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+      animation: pulseGreen 2s infinite;
+    }
+
+    @keyframes pulseGreen {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    .bambu-fab-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0 0 8px 0;
+      letter-spacing: -0.01em;
+    }
+
+    .bambu-fab-subtitle {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin: 0;
+      max-width: 900px;
+    }
+
+    .bambu-fab-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-bottom: 28px;
+    }
+
+    .bambu-fab-card {
+      background: #121622;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .bambu-fab-card:hover {
+      border-color: #38bdf8;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.65), 0 0 20px rgba(56, 189, 248, 0.16);
+      transform: translateY(-3px);
+      background: #151a2a;
+    }
+
+    .bambu-fab-media {
+      position: relative;
+      width: 100%;
+      height: 270px;
+      background: #06080d;
+      overflow: hidden;
+    }
+
+    .bambu-fab-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .bambu-fab-card:hover .bambu-fab-media img {
+      transform: scale(1.04);
+    }
+
+    .bambu-fab-media-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 12px;
+      background: linear-gradient(180deg, rgba(6, 8, 13, 0.4) 0%, transparent 40%, rgba(6, 8, 13, 0.75) 100%);
+    }
+
+    .bambu-fab-tag-top {
+      align-self: flex-start;
+      background: rgba(10, 14, 22, 0.88);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+      padding: 4px 9px;
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .bambu-tag-icon {
+      color: #10b981;
+      font-size: 0.625rem;
+    }
+
+    .bambu-tag-icon.pulse-orange {
+      color: #f59e0b;
+    }
+
+    .bambu-fab-zoom-badge {
+      align-self: flex-end;
+      background: rgba(10, 14, 22, 0.88);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .bambu-fab-info {
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .bambu-fab-card-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .bambu-fab-card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .bambu-fab-status-pill {
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .bambu-fab-status-pill.green {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #10b981;
+    }
+
+    .bambu-fab-status-pill.blue {
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: #38bdf8;
+    }
+
+    .bambu-fab-card-desc {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin: 0 0 14px 0;
+      flex-grow: 1;
+    }
+
+    .bambu-fab-meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .bambu-fab-meta-pills span {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 4px;
+      padding: 3px 8px;
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      color: var(--text-muted);
+    }
+
+    /* Timeline Pipeline */
+    .bambu-fab-timeline {
+      background: rgba(0, 0, 0, 0.28);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-sm);
+      padding: 20px 22px;
+    }
+
+    .bambu-fab-timeline-title {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .bambu-fab-timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .bambu-fab-timeline-item {
+      background: rgba(255, 255, 255, 0.02);
+      border-left: 2px solid #38bdf8;
+      padding: 10px 14px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .bambu-fab-timeline-num {
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      font-weight: 700;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+
+    .bambu-fab-timeline-heading {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      line-height: 1.35;
+    }
+
+    .bambu-fab-timeline-body {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    @media (max-width: 992px) {
+      .bambu-fab-photo-grid {
+        grid-template-columns: 1fr;
+      }
+      .bambu-fab-timeline-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .bambu-fab-media {
+        height: 220px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .bambu-fab-timeline-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
   <!-- Three.js & OrbitControls for 3D CAD Assembly Viewer -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -7778,6 +8079,126 @@
               <p class="bambu-step-desc">
                 Reviewed the final print configuration and sent the sliced model to the Bambu Lab A1 mini.
               </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- In-Process Physical Printing & Component Fabrication Section -->
+        <div class="bambu-fabrication-block">
+          <div class="bambu-fab-header">
+            <div class="bambu-fab-badge">
+              <span class="bambu-pulse-dot"></span>
+              <span>Physical Fabrication Phase • Active Machine Execution</span>
+            </div>
+            <h3 class="bambu-fab-title">
+              In-Process 3D Printing & Physical Component Fabrication
+            </h3>
+            <p class="bambu-fab-subtitle">
+              Following the Bambu Studio LAN dispatch, the Bambu Lab A1 mini executes high-speed automated extrusion on the textured PEI plate. Below are the actual fabrication photographs and chronological physical execution phases for the SPIROBE chassis base plate and continuum vertebrae.
+            </p>
+          </div>
+
+          <!-- Dual High-Resolution Process Photography Showcase -->
+          <div class="bambu-fab-photo-grid">
+            <!-- Card 1: Chassis Base Plate Fabrication -->
+            <div class="bambu-fab-card"
+              onclick="openPhotoViewer('assets/images/bambu/bambu_print_process_base_plate.jpg', 'Chassis Base Plate Printing • Bambu Lab A1 mini', 'In-process FDM fabrication of the SPIROBE chassis base plate on the textured PEI heated bed, showing vertical mounting posts and N20 motor brackets.')">
+              <div class="bambu-fab-media">
+                <img src="assets/images/bambu/bambu_print_process_base_plate.jpg" alt="Bambu Lab A1 mini printing the SPIROBE chassis base plate" loading="lazy">
+                <div class="bambu-fab-media-overlay">
+                  <div class="bambu-fab-tag-top">
+                    <span class="bambu-tag-icon">●</span> Active Machine Print
+                  </div>
+                  <div class="bambu-fab-zoom-badge">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View High-Res
+                  </div>
+                </div>
+              </div>
+              <div class="bambu-fab-info">
+                <div class="bambu-fab-card-title-row">
+                  <span class="bambu-fab-card-title">Chassis Base Plate Fabrication</span>
+                  <span class="bambu-fab-status-pill green">In-Progress • 60°C Bed</span>
+                </div>
+                <p class="bambu-fab-card-desc">
+                  Physical fabrication of the main chassis base plate (Part 6) on the textured PEI heated bed. Notice the vertical mounting posts, motor cradle standoffs, and perimeter brim ensuring stable bed adhesion during high-speed cantilever motion.
+                </p>
+                <div class="bambu-fab-meta-pills">
+                  <span>Part: Chassis Base (148×158mm)</span>
+                  <span>Filament: PLA Basic White</span>
+                  <span>Bed: Textured PEI Plate</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Articulated Continuum Vertebrae Extrusion -->
+            <div class="bambu-fab-card"
+              onclick="openPhotoViewer('assets/images/bambu/bambu_print_process_vertebrae.jpg', 'Continuum Vertebrae Layer Deposition • Bambu Lab A1 mini', 'Macro detail of high-precision 0.20 mm layer deposition and brim adhesion forming the 15-segment logarithmic continuum finger spine.')">
+              <div class="bambu-fab-media">
+                <img src="assets/images/bambu/bambu_print_process_vertebrae.jpg" alt="Macro view of Bambu Lab nozzle depositing continuum vertebrae layers" loading="lazy">
+                <div class="bambu-fab-media-overlay">
+                  <div class="bambu-fab-tag-top">
+                    <span class="bambu-tag-icon pulse-orange">●</span> Toolhead Macro
+                  </div>
+                  <div class="bambu-fab-zoom-badge">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View High-Res
+                  </div>
+                </div>
+              </div>
+              <div class="bambu-fab-info">
+                <div class="bambu-fab-card-title-row">
+                  <span class="bambu-fab-card-title">Continuum Vertebrae Extrusion</span>
+                  <span class="bambu-fab-status-pill blue">0.20 mm Layers • 220°C Nozzle</span>
+                </div>
+                <p class="bambu-fab-card-desc">
+                  Macro close-up of the Bambu Lab 0.4 mm hotend nozzle laying down precise 0.20 mm standard layers with active cooling. The continuous 5 mm brim connects each vertebra to maintain stability while forming delicate clevis knuckles and internal tendon conduits.
+                </p>
+                <div class="bambu-fab-meta-pills">
+                  <span>Part: 15-Segment Spine</span>
+                  <span>Nozzle: 0.4 mm @ 220°C</span>
+                  <span>Tolerance: Tight Clevis Joint</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chronological Physical Printing Process Timeline / Step Breakdown -->
+          <div class="bambu-fab-timeline">
+            <div class="bambu-fab-timeline-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              Chronological Machine Printing Process
+            </div>
+            <div class="bambu-fab-timeline-grid">
+              <div class="bambu-fab-timeline-item">
+                <div class="bambu-fab-timeline-num">Stage 01</div>
+                <div class="bambu-fab-timeline-heading">Automated Bed Levelling & Nozzle Purge</div>
+                <div class="bambu-fab-timeline-body">
+                  The A1 mini heats the nozzle to 140°C for tip cleaning, then employs its high-frequency eddy-current sensor to probe multiple points across the PEI plate, creating a dynamic topographical bed mesh compensation matrix.
+                </div>
+              </div>
+
+              <div class="bambu-fab-timeline-item">
+                <div class="bambu-fab-timeline-num">Stage 02</div>
+                <div class="bambu-fab-timeline-heading">Flow Dynamics Calibration</div>
+                <div class="bambu-fab-timeline-body">
+                  High-frequency eddy-current sensors measure real-time extrusion pressure advance against nozzle backpressure, automatically tuning the K-factor to prevent over-extrusion on rapid velocity changes and sharp corners.
+                </div>
+              </div>
+
+              <div class="bambu-fab-timeline-item">
+                <div class="bambu-fab-timeline-num">Stage 03</div>
+                <div class="bambu-fab-timeline-heading">First-Layer 5 mm Brim Laydown</div>
+                <div class="bambu-fab-timeline-body">
+                  Hotend ramps to 220°C and deposits a 5 mm outer perimeter brim at 50 mm/s on the 60°C heated textured PEI plate, establishing an immovable foundation for the high-aspect-ratio vertebrae segments and chassis base.
+                </div>
+              </div>
+
+              <div class="bambu-fab-timeline-item">
+                <div class="bambu-fab-timeline-num">Stage 04</div>
+                <div class="bambu-fab-timeline-heading">High-Speed Core Deposition & Bridging</div>
+                <div class="bambu-fab-timeline-body">
+                  Accelerating up to 500 mm/s with closed-loop motion control, the printer deposits perimeters and 15% grid infill with dual active cooling fans, bridging clevis knuckle overhangs with zero warping or sag.
+                </div>
+              </div>
             </div>
           </div>
         </div>

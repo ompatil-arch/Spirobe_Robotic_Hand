@@ -5327,10 +5327,9 @@
     }
 
     .bambu-about-layout {
-      display: grid;
-      grid-template-columns: 1fr 210px;
+      display: flex;
+      flex-direction: column;
       gap: 20px;
-      align-items: stretch;
       flex-grow: 1;
     }
 
@@ -5346,7 +5345,8 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
       background: #080a0f;
       cursor: pointer;
-      min-height: 250px;
+      width: 100%;
+      height: 350px;
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -5360,7 +5360,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center center;
+      object-position: center 36%;
       transition: transform 0.35s ease;
       display: block;
     }
@@ -5691,12 +5691,8 @@
     }
 
     @media (max-width: 768px) {
-      .bambu-about-layout {
-        grid-template-columns: 1fr;
-      }
       .bambu-about-media {
-        min-height: 220px;
-        max-height: 300px;
+        height: 260px;
       }
       .bambu-workflow-grid {
         grid-template-columns: 1fr;
@@ -7000,31 +6996,7 @@
           </div>
         </div>
 
-        <!-- 5. Laser Cutting Parameters Section -->
-        <div class="bambu-results-panel" style="margin-bottom: 44px;">
-          <div class="bambu-results-header">
-            <h3 class="bambu-results-title">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              5. Laser Cutting Parameters & Calibration Matrix
-            </h3>
-            <span class="bambu-results-disclaimer">Standard Workshop Calibration Chart</span>
-          </div>
-
-          <div style="display: flex; justify-content: center; align-items: center; padding: 12px 0;">
-            <div class="bambu-about-media"
-              onclick="openPhotoViewer('assets/images/lasercad/lasercad_parameter_chart.jpg', 'SIL Acrylic Cutting & Parameter Chart', 'Makerspace official machine calibration parameter chart for Acrylic, MDF, Glass, Leather, Marble, Cardboard, Paper, and Thermocol.')"
-              style="max-width: 520px; width: 100%; border-radius: var(--radius-sm); overflow: hidden; background: #ffffff; cursor: pointer; box-shadow: 0 8px 30px rgba(0,0,0,0.5);"
-              title="Click to Inspect in High-Res Lightbox">
-              <img src="assets/images/lasercad/lasercad_parameter_chart.jpg" alt="Official SIL Acrylic Cutting Parameter Chart" loading="lazy" style="width: 100%; height: auto; display: block; object-fit: contain;">
-              <div class="bambu-media-badge" style="background: rgba(10, 14, 22, 0.9);">Parameter Chart (Click to Enlarge)</div>
-              <div class="proto-thumb-overlay">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. Machine Safety and Precautions Grid -->
+<!-- 6. Machine Safety and Precautions Grid -->
         <div class="bambu-results-panel" style="margin-bottom: 44px; border-color: rgba(239, 68, 68, 0.25);">
           <div class="bambu-results-header">
             <h3 class="bambu-results-title" style="color: #ef4444;">

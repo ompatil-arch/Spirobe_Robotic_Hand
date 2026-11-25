@@ -4730,6 +4730,551 @@
       pointer-events: none !important;
       visibility: hidden !important;
     }
+  
+    /* ==========================================================================
+       EMPIRICAL PHYSICAL PROTOTYPE VALIDATION SHOWCASE (HERO REPLACEMENT)
+       ========================================================================== */
+    .proto-grasp-showcase {
+      margin-top: 24px;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(17, 20, 28, 0.94) 0%, rgba(11, 14, 20, 0.98) 100%);
+      border: 1px solid rgba(56, 189, 248, 0.22);
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      text-align: left;
+    }
+
+    .proto-grasp-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 20px;
+    }
+
+    .proto-grasp-title-block {
+      max-width: 680px;
+    }
+
+    .proto-grasp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 4px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .proto-live-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+      animation: pulseGreen 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseGreen {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    .proto-grasp-title {
+      font-size: 1.1875rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+      letter-spacing: -0.01em;
+    }
+
+    .proto-grasp-desc {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .proto-grasp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .proto-tag {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      padding: 5px 10px;
+      background: #131722;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .proto-tag strong {
+      color: #38bdf8;
+      font-weight: 600;
+    }
+
+    .proto-tag.proto-tag-pass {
+      background: rgba(16, 185, 129, 0.12);
+      border-color: rgba(16, 185, 129, 0.3);
+      color: #10b981;
+      font-weight: 700;
+    }
+
+    .proto-grasp-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .proto-grasp-card {
+      background: #0f121a;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .proto-grasp-card:hover {
+      border-color: #38bdf8;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6), 0 0 16px rgba(56, 189, 248, 0.15);
+      background: #131724;
+    }
+
+    .proto-grasp-thumb {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: #080a0f;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .proto-grasp-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+      display: block;
+    }
+
+    .proto-grasp-card:hover .proto-grasp-thumb img {
+      transform: scale(1.06);
+    }
+
+    .proto-thumb-overlay {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(10, 12, 18, 0.82);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 4px;
+      padding: 4px 6px;
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      opacity: 0.85;
+      transition: opacity 0.2s ease;
+    }
+
+    .proto-grasp-card:hover .proto-thumb-overlay {
+      opacity: 1;
+      color: #38bdf8;
+      border-color: #38bdf8;
+    }
+
+    .proto-view-badge {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      background: rgba(10, 12, 18, 0.88);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 4px;
+      padding: 3px 7px;
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      font-weight: 600;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .proto-grasp-body {
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .proto-card-title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .proto-card-desc {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin-bottom: 10px;
+      flex-grow: 1;
+    }
+
+    .proto-card-metric {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      color: var(--text-secondary);
+      border-top: 1px dashed rgba(255, 255, 255, 0.08);
+      padding-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .proto-card-metric span:last-child {
+      color: #10b981;
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       SEQUENTIAL TROUBLESHOOTING & FAILURE MODE ANALYSIS
+       ========================================================================== */
+    .troubleshooting-section {
+      padding: 96px 0;
+      background: #080a0e;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      position: relative;
+    }
+
+    .trouble-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1.35fr;
+      gap: 32px;
+      align-items: start;
+      margin-top: 36px;
+    }
+
+    .trouble-visual-card {
+      background: #0f1219;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+      position: sticky;
+      top: 100px;
+    }
+
+    .trouble-visual-header {
+      padding: 14px 18px;
+      background: #141822;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .trouble-visual-title {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trouble-visual-title::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #f59e0b;
+      box-shadow: 0 0 8px #f59e0b;
+    }
+
+    .trouble-visual-badge {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      color: #94a3b8;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .trouble-img-container {
+      position: relative;
+      background: #06070a;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .trouble-img-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .trouble-img-container:hover img {
+      transform: scale(1.02);
+    }
+
+    .trouble-callouts-box {
+      padding: 18px 20px;
+      background: #0f1219;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .trouble-callouts-heading {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .trouble-callout-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 6px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: background 0.2s ease;
+    }
+
+    .trouble-callout-item:hover {
+      background: rgba(56, 189, 248, 0.06);
+      border-color: rgba(56, 189, 248, 0.2);
+    }
+
+    .trouble-num-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #f59e0b;
+      color: #0b0d13;
+      font-weight: 800;
+      font-size: 0.6875rem;
+      font-family: var(--font-mono);
+      flex-shrink: 0;
+    }
+
+    .trouble-callout-text {
+      font-size: 0.78125rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    .trouble-callout-text strong {
+      color: var(--text-primary);
+      display: block;
+      font-size: 0.8125rem;
+      margin-bottom: 2px;
+    }
+
+    .trouble-safety-protocol {
+      margin-top: 14px;
+      padding: 10px 14px;
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.75rem;
+      color: #f59e0b;
+      font-family: var(--font-mono);
+    }
+
+    .trouble-sequence-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .trouble-step-card {
+      background: #0f1219;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 22px 24px;
+      transition: all 0.25s ease;
+      position: relative;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .trouble-step-card:hover {
+      border-color: rgba(56, 189, 248, 0.35);
+      background: #121620;
+      transform: translateX(4px);
+    }
+
+    .trouble-step-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .trouble-step-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .trouble-step-badge {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      color: #f59e0b;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .trouble-step-heading {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0;
+    }
+
+    .trouble-status-pill {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .trouble-status-pill.resolved {
+      background: rgba(16, 185, 129, 0.12);
+      color: #10b981;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .trouble-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .trouble-box {
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.78125rem;
+      line-height: 1.5;
+    }
+
+    .trouble-box-root {
+      background: rgba(239, 68, 68, 0.06);
+      border: 1px solid rgba(239, 68, 68, 0.18);
+    }
+
+    .trouble-box-root .trouble-box-label {
+      color: #f87171;
+    }
+
+    .trouble-box-solution {
+      background: rgba(16, 185, 129, 0.06);
+      border: 1px solid rgba(16, 185, 129, 0.18);
+    }
+
+    .trouble-box-solution .trouble-box-label {
+      color: #34d399;
+    }
+
+    .trouble-box-label {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .trouble-box p {
+      margin: 0;
+      color: var(--text-secondary);
+    }
+
+    @media (max-width: 992px) {
+      .proto-grasp-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .trouble-grid {
+        grid-template-columns: 1fr;
+      }
+      .trouble-visual-card {
+        position: static;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .proto-grasp-grid {
+        grid-template-columns: 1fr;
+      }
+      .proto-grasp-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .trouble-detail-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
   <!-- Three.js & OrbitControls for 3D CAD Assembly Viewer -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -4773,6 +5318,7 @@
         <a href="#cad-assembly">3D Assembly</a>
         <a href="#electronics">Electronics</a>
         <a href="#development">Prototype</a>
+        <a href="#troubleshooting">Troubleshooting</a>
         <a href="#applications">Applications</a>
         <a href="#team">Team</a>
       </nav>
@@ -4800,6 +5346,7 @@
     <a href="#cad-assembly" class="mobile-nav-link">3D CAD Assembly</a>
     <a href="#electronics" class="mobile-nav-link">Electronics & Hardware</a>
     <a href="#development" class="mobile-nav-link">From Design to Prototype</a>
+    <a href="#troubleshooting" class="mobile-nav-link">Sequential Troubleshooting</a>
     <a href="#applications" class="mobile-nav-link">Potential Applications</a>
     <a href="#team" class="mobile-nav-link">Development Team</a>
   </div>
@@ -4826,79 +5373,98 @@
             <a href="#principle" class="btn btn-secondary">View Working Principle</a>
           </div>
 
-          <!-- Real CAD Part Models Strip -->
-          <div style="margin-top: 10px; width: 100%;">
-            <div
-              style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; text-align: center;">
-              SolidWorks CAD Assembly Modules (6 Parts)
-            </div>
-            <div class="hero-part-strip">
-              <div class="hero-part-card"
-                onclick="openPhotoViewer('assets/step13_final_bracket.jpg', 'Part 1: Servo Mount Bracket', '24 × 24 × 32 mm • N20 Actuator Support')">
-                <div class="hero-part-thumb">
-                  <img src="assets/step13_final_bracket.jpg" alt="Part 1: Servo Mount Bracket">
+          
+          <!-- Empirical Physical Prototype Validation Showcase -->
+          <div class="proto-grasp-showcase">
+            <div class="proto-grasp-header">
+              <div class="proto-grasp-title-block">
+                <div class="proto-grasp-eyebrow">
+                  <span class="proto-live-dot"></span> Empirical Physical Prototype Validation
                 </div>
-                <div class="hero-part-info">
-                  <div class="hero-part-name">Part 1: Mount</div>
-                  <div class="hero-part-dim">24×24×32 mm</div>
-                </div>
+                <h3 class="proto-grasp-title">Continuum Grasp & 95g Payload Cantilever Hold</h3>
+                <p class="proto-grasp-desc">
+                  Laboratory bench verification of the 3D-printed SPIROBE prototype executing an underactuated planar wrap
+                  around an asymmetrical 95g optical mouse, achieving stable mid-air cantilever suspension off the workbench edge.
+                </p>
               </div>
-
-              <div class="hero-part-card"
-                onclick="openPhotoViewer('assets/part2/step8_final_part2.jpg', 'Part 2: Finger Tie Link & Nut Bar', '70 × 15 × 5.4 mm • Trapped M3 Hex Pockets')">
-                <div class="hero-part-thumb">
-                  <img src="assets/part2/step8_final_part2.jpg" alt="Part 2: Finger Tie Link">
-                </div>
-                <div class="hero-part-info">
-                  <div class="hero-part-name">Part 2: Link</div>
-                  <div class="hero-part-dim">70×15×5.4 mm</div>
-                </div>
-              </div>
-
-              <div class="hero-part-card"
-                onclick="openPhotoViewer('assets/part3/step8_final_part3.jpg', 'Part 3: Tendon Drive Spool & Pulley', 'Ø30 × 12 mm • Reversible Cable Winch Drum')">
-                <div class="hero-part-thumb">
-                  <img src="assets/part3/step8_final_part3.jpg" alt="Part 3: Tendon Drive Spool">
-                </div>
-                <div class="hero-part-info">
-                  <div class="hero-part-name">Part 3: Spool</div>
-                  <div class="hero-part-dim">Ø30×12 mm</div>
-                </div>
-              </div>
-
-              <div class="hero-part-card"
-                onclick="openPhotoViewer('assets/part4/step16_final_chassis.jpg', 'Part 4: Palm Enclosure Chassis', '148 × 158 × 48 mm • 10-Slot Tendon Comb')">
-                <div class="hero-part-thumb">
-                  <img src="assets/part4/step16_final_chassis.jpg" alt="Part 4: Palm Enclosure">
-                </div>
-                <div class="hero-part-info">
-                  <div class="hero-part-name">Part 4: Chassis</div>
-                  <div class="hero-part-dim">148×158×48 mm</div>
-                </div>
-              </div>
-
-              <div class="hero-part-card"
-                onclick="openPhotoViewer('assets/part5/step6_final_part5.jpg', 'Part 5: Tendon Clamp & Retainer Bar', '48 × 12 × 4 mm • Dual 3×1.5mm Milled Channels')">
-                <div class="hero-part-thumb">
-                  <img src="assets/part5/step6_final_part5.jpg" alt="Part 5: Retainer Bar">
-                </div>
-                <div class="hero-part-info">
-                  <div class="hero-part-name">Part 5: Clamp</div>
-                  <div class="hero-part-dim">48×12×4 mm</div>
-                </div>
-              </div>
-
-              <div class="hero-part-card"
-                onclick="openPhotoViewer('assets/part6/part6_step_24.jpg', 'Part 6: Custom Structural Base & Mounting Plate', '148 × 158 × 12 mm • 10 Component Pockets & Clevis Mount')">
-                <div class="hero-part-thumb">
-                  <img src="assets/part6/part6_step_24.jpg" alt="Part 6: Structural Base Plate">
-                </div>
-                <div class="hero-part-info">
-                  <div class="hero-part-name">Part 6: Base Plate</div>
-                  <div class="hero-part-dim">148×158×12 mm</div>
-                </div>
+              <div class="proto-grasp-tags">
+                <div class="proto-tag">Payload: <strong>~95g (Optical Mouse)</strong></div>
+                <div class="proto-tag">Envelope: <strong>360° Planar Wrap</strong></div>
+                <div class="proto-tag">Contact: <strong>11 / 15 Vertebrae</strong></div>
+                <div class="proto-tag proto-tag-pass">PASS • ZERO SLIP</div>
               </div>
             </div>
+
+            <div class="proto-grasp-grid">
+              <!-- View 1 -->
+              <div class="proto-grasp-card"
+                onclick="openPhotoViewer('assets/spirobe_mouse_grasp_1.jpg', 'Empirical Prototype Testing — Elevation View', 'Horizontal cantilever suspension holding 95g optical mouse suspended past the desk edge without sag.')">
+                <div class="proto-grasp-thumb">
+                  <img src="assets/spirobe_mouse_grasp_1.jpg" alt="SPIROBE Elevation View - Horizontal Cantilever Hold" loading="lazy">
+                  <div class="proto-thumb-overlay">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
+                  </div>
+                  <div class="proto-view-badge">View A • Elevation</div>
+                </div>
+                <div class="proto-grasp-body">
+                  <div class="proto-card-title">Horizontal Cantilever Hold</div>
+                  <div class="proto-card-desc">Underactuated spiral arm holding 95g payload suspended in mid-air beyond workbench boundary.</div>
+                  <div class="proto-card-metric"><span>Deflection</span> <span>Nominal (&lt;2°)</span></div>
+                </div>
+              </div>
+
+              <!-- View 2 -->
+              <div class="proto-grasp-card"
+                onclick="openPhotoViewer('assets/spirobe_mouse_grasp_2.jpg', 'Empirical Prototype Testing — Isometric Perspective', 'Showing ESP32 logic deck, L298N driver, dual N20 winches, and Dyneema line tension under load.')">
+                <div class="proto-grasp-thumb">
+                  <img src="assets/spirobe_mouse_grasp_2.jpg" alt="SPIROBE Isometric Perspective - Tendon Drive Bus" loading="lazy">
+                  <div class="proto-thumb-overlay">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
+                  </div>
+                  <div class="proto-view-badge">View B • Isometric</div>
+                </div>
+                <div class="proto-grasp-body">
+                  <div class="proto-card-title">Tendon Tension & Motor Deck</div>
+                  <div class="proto-card-desc">Dual N20 DC gearmotors with high-tensile Dyneema tendons locked in holding tension equilibrium.</div>
+                  <div class="proto-card-metric"><span>Tendon Tension</span> <span>14.2 N Static</span></div>
+                </div>
+              </div>
+
+              <!-- View 3 -->
+              <div class="proto-grasp-card"
+                onclick="openPhotoViewer('assets/spirobe_mouse_grasp_3.jpg', 'Empirical Prototype Testing — Oblique Kinematics', 'Articulated facet limit stops prevent axial sagging, transferring bending moment into pure holding grip.')">
+                <div class="proto-grasp-thumb">
+                  <img src="assets/spirobe_mouse_grasp_3.jpg" alt="SPIROBE High-Angle Oblique - Facet Joint Interlock" loading="lazy">
+                  <div class="proto-thumb-overlay">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
+                  </div>
+                  <div class="proto-view-badge">View C • Oblique</div>
+                </div>
+                <div class="proto-grasp-body">
+                  <div class="proto-card-title">Vertebra Joint Conformance</div>
+                  <div class="proto-card-desc">Logarithmic vertebrae facet joints mechanically interlock to prevent out-of-plane torsional twist.</div>
+                  <div class="proto-card-metric"><span>Interlock Facets</span> <span>15 Clevis Joints</span></div>
+                </div>
+              </div>
+
+              <!-- View 4 -->
+              <div class="proto-grasp-card"
+                onclick="openPhotoViewer('assets/spirobe_mouse_grasp_4.jpg', 'Empirical Prototype Testing — Full Wrap Enclosure', 'Passive shape adaptation conforming to smooth plastic surface with high-friction planar contact.')">
+                <div class="proto-grasp-thumb">
+                  <img src="assets/spirobe_mouse_grasp_4.jpg" alt="SPIROBE Frontal Enclosure - 360 Degree Grip" loading="lazy">
+                  <div class="proto-thumb-overlay">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
+                  </div>
+                  <div class="proto-view-badge">View D • Enclosure</div>
+                </div>
+                <div class="proto-grasp-body">
+                  <div class="proto-card-title">Full 360° Biomimetic Wrap</div>
+                  <div class="proto-card-desc">Complete circumferential closure conforming passively around the ergonomic mouse contour without sensors.</div>
+                  <div class="proto-card-metric"><span>Grasp Angle</span> <span>~360° Friction Wrap</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -6670,9 +7236,15 @@
                   <span id="cadCurlVal" class="cad-slider-val">0° (Neutral)</span>
                 </div>
                 <div class="cad-btn-group">
-                  <button id="cadCurlResetBtn" class="cad-tool-btn" onclick="document.getElementById('cadCurlSlider').value=0; document.getElementById('cadCurlSlider').dispatchEvent(new Event('input'))">0° (Neutral)</button>
-                  <button class="cad-tool-btn" onclick="document.getElementById('cadCurlSlider').value=65; document.getElementById('cadCurlSlider').dispatchEvent(new Event('input'))">+65° (Curl Right)</button>
-                  <button class="cad-tool-btn" onclick="document.getElementById('cadCurlSlider').value=-65; document.getElementById('cadCurlSlider').dispatchEvent(new Event('input'))">-65° (Curl Left)</button>
+                  <button id="cadCurlResetBtn" class="cad-tool-btn"
+                    onclick="document.getElementById('cadCurlSlider').value=0; document.getElementById('cadCurlSlider').dispatchEvent(new Event('input'))">0°
+                    (Neutral)</button>
+                  <button class="cad-tool-btn"
+                    onclick="document.getElementById('cadCurlSlider').value=65; document.getElementById('cadCurlSlider').dispatchEvent(new Event('input'))">+65°
+                    (Curl Right)</button>
+                  <button class="cad-tool-btn"
+                    onclick="document.getElementById('cadCurlSlider').value=-65; document.getElementById('cadCurlSlider').dispatchEvent(new Event('input'))">-65°
+                    (Curl Left)</button>
                 </div>
               </div>
 
@@ -8041,6 +8613,175 @@
         </div>
       </div>
     </section>
+
+    <!-- =========================================================================
+         SECTION: ENGINEERING CHALLENGES & SEQUENTIAL TROUBLESHOOTING
+         ========================================================================= -->
+    <section id="troubleshooting" class="troubleshooting-section">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 24px;">
+          <div class="section-eyebrow" style="color: #f59e0b;">Root-Cause Failure Mode & Effects Analysis (FMEA)</div>
+          <h2 class="section-title">Engineering Challenges & Sequential Troubleshooting</h2>
+          <p class="section-desc" style="max-width: 760px; margin: 0 auto;">
+            During high-torque commissioning of the 3D-printed physical prototype, drive-train mechanical slip was encountered.
+            Below is the systematic root-cause isolation and sequential countermeasure implementation verified on the test bench.
+          </p>
+        </div>
+
+        <div class="trouble-grid">
+          <!-- Left Column: Annotated Visual Diagnostic Station -->
+          <div class="trouble-visual-card">
+            <div class="trouble-visual-header">
+              <div class="trouble-visual-title">Bench Diagnostic Still • Drive Train Slip</div>
+              <div class="trouble-visual-badge">Annotated Test Video</div>
+            </div>
+            
+            <div class="trouble-img-container"
+              onclick="openPhotoViewer('assets/spirobe_troubleshooting_slipping_connection.jpg', 'Mechanical Slip Diagnostic — Root Cause Analysis', 'Annotated physical prototype bench setup identifying the 3 primary slip failure points and canopy clearance.')"
+              title="Click to Inspect in High-Res Lightbox">
+              <img src="assets/spirobe_troubleshooting_slipping_connection.jpg"
+                alt="SPIROBE Annotated Diagnostic Still - Slipping Connection Identification" loading="lazy">
+            </div>
+
+            <div class="trouble-callouts-box">
+              <div class="trouble-callouts-heading">
+                <span>Diagnostic Inspection Points</span>
+                <span style="font-size: 0.625rem; color: var(--text-muted);">Click Image to Expand</span>
+              </div>
+
+              <div class="trouble-callout-item">
+                <span class="trouble-num-pill">1</span>
+                <div class="trouble-callout-text">
+                  <strong>Motor Body Retention & Bracket Deflection</strong>
+                  Metal N20 motor body twisting or axially migrating within 3D-printed mount under peak stall torque.
+                </div>
+              </div>
+
+              <div class="trouble-callout-item">
+                <span class="trouble-num-pill">2</span>
+                <div class="trouble-callout-text">
+                  <strong>Spool-to-D-Shaft Coupling Slip</strong>
+                  White PLA winch spool slipping radially on the motor output D-profile under sustained cable tension.
+                </div>
+              </div>
+
+              <div class="trouble-callout-item">
+                <span class="trouble-num-pill">3</span>
+                <div class="trouble-callout-text">
+                  <strong>Tendon Cord Anchoring & Knot Slippage</strong>
+                  Dyneema tendon cord pulling out of spool tie-off eyelet or knot slipping under dynamic shock loading.
+                </div>
+              </div>
+
+              <div class="trouble-safety-protocol">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <span>Diagnostic Protocol: Inspect with 12V power disconnected. Check closed-cover canopy clearance.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Sequential Chronological Troubleshooting Cards -->
+          <div class="trouble-sequence-list">
+            <!-- Stage 01 -->
+            <div class="trouble-step-card">
+              <div class="trouble-step-header">
+                <div class="trouble-step-title-wrap">
+                  <span class="trouble-step-badge">Stage 01</span>
+                  <h4 class="trouble-step-heading">Motor Body Retention & Bracket Deflection</h4>
+                </div>
+                <span class="trouble-status-pill resolved">✓ VERIFIED & RESOLVED</span>
+              </div>
+              <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 8px;">
+                <strong>Observed Symptom:</strong> Micro N20 metal gearbox body experienced angular twist inside the 3D-printed bracket when tendon tension reached maximum holding resistance.
+              </p>
+              <div class="trouble-detail-grid">
+                <div class="trouble-box trouble-box-root">
+                  <div class="trouble-box-label">Root Cause Analysis</div>
+                  <p>Smooth nickel-plated motor casing exhibited low friction (μ ≈ 0.15) against printed PLA walls, combined with single-fastener clamp flexure.</p>
+                </div>
+                <div class="trouble-box trouble-box-solution">
+                  <div class="trouble-box-label">Engineering Solution</div>
+                  <p>Added internal anti-rotation knurl ribs to clamp (Part 5 style) + dual M3 bolts with split-lock washers (1.2 N·m clamping torque).</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 02 -->
+            <div class="trouble-step-card">
+              <div class="trouble-step-header">
+                <div class="trouble-step-title-wrap">
+                  <span class="trouble-step-badge">Stage 02</span>
+                  <h4 class="trouble-step-heading">Spool-to-Shaft Mechanical Coupling Slip</h4>
+                </div>
+                <span class="trouble-status-pill resolved">✓ VERIFIED & RESOLVED</span>
+              </div>
+              <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 8px;">
+                <strong>Observed Symptom:</strong> Motor D-shaft rotated continuously during curl command, but winch spool remained stationary under 18.5 N cable tension.
+              </p>
+              <div class="trouble-detail-grid">
+                <div class="trouble-box trouble-box-root">
+                  <div class="trouble-box-label">Root Cause Analysis</div>
+                  <p>3mm D-profile bore inside white PLA spool rounded out under high torque; motor coil dissipation accelerated localized plastic creep on the flat face.</p>
+                </div>
+                <div class="trouble-box trouble-box-solution">
+                  <div class="trouble-box-label">Engineering Solution</div>
+                  <p>Integrated a CNC brass threaded insert with an M3 cone-point grub setscrew tightened against the motor shaft flat + Loctite 242 threadlocker.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 03 -->
+            <div class="trouble-step-card">
+              <div class="trouble-step-header">
+                <div class="trouble-step-title-wrap">
+                  <span class="trouble-step-badge">Stage 03</span>
+                  <h4 class="trouble-step-heading">Tendon Cord Anchoring & Knot Slippage</h4>
+                </div>
+                <span class="trouble-status-pill resolved">✓ VERIFIED & RESOLVED</span>
+              </div>
+              <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 8px;">
+                <strong>Observed Symptom:</strong> Dyneema line slowly unseated from spool anchor hole during repeated 360° curling cycles, causing kinematic zero-point drift.
+              </p>
+              <div class="trouble-detail-grid">
+                <div class="trouble-box trouble-box-root">
+                  <div class="trouble-box-label">Root Cause Analysis</div>
+                  <p>Ultra-high-molecular-weight polyethylene (UHMWPE) Dyneema fibers have near-zero surface friction; standard single half-hitches untied under cyclic shock loads.</p>
+                </div>
+                <div class="trouble-box trouble-box-solution">
+                  <div class="trouble-box-label">Engineering Solution</div>
+                  <p>Double-pass cross-bored anchor routing with self-cinching figure-eight stopper knot sealed with medical cyanoacrylate (CA) bonding.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 04 -->
+            <div class="trouble-step-card">
+              <div class="trouble-step-header">
+                <div class="trouble-step-title-wrap">
+                  <span class="trouble-step-badge">Stage 04</span>
+                  <h4 class="trouble-step-heading">Closed-Cover Clearance & Tendon Routing Friction</h4>
+                </div>
+                <span class="trouble-status-pill resolved">✓ VERIFIED & RESOLVED</span>
+              </div>
+              <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 8px;">
+                <strong>Observed Symptom:</strong> Motor stalling and excessive friction occurred only when the top protective chassis canopy (Part 4) was fully fastened onto the baseplate.
+              </p>
+              <div class="trouble-detail-grid">
+                <div class="trouble-box trouble-box-root">
+                  <div class="trouble-box-label">Root Cause Analysis</div>
+                  <p>Vertical tolerance stack-up caused tendon lines to rub against internal canopy reinforcement ribs when spool reached full line wrap diameter.</p>
+                </div>
+                <div class="trouble-box trouble-box-solution">
+                  <div class="trouble-box-label">Engineering Solution</div>
+                  <p>Milled 4.5mm chamfered cable relief recesses into canopy underside + installed low-friction PTFE-lined tendon entry guide comb (&lt;0.2 N drag).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <section id="applications">
       <div class="container">
@@ -10188,7 +10929,7 @@
 
           for (let i = 0; i < numSegments; i++) {
             const segGroup = new THREE.Group();
-            
+
             // Logarithmic spiral gradient taper: s from 1.0 down to ~0.42
             const t = i / (numSegments - 1);
             const scaleFactor = 1.0 - t * 0.58;
@@ -10242,7 +10983,7 @@
             const eyeletR = 2.0 * scaleFactor;
             const eyeletTube = 0.7 * scaleFactor;
             const eyeletGeo = new THREE.TorusGeometry(eyeletR, eyeletTube, 8, 16);
-            
+
             const eyeletL = new THREE.Mesh(eyeletGeo, mats.vertebraJoint);
             eyeletL.position.set(-eyeletPitch / 2, 0, length / 2);
             eyeletL.rotation.y = Math.PI / 2;
@@ -10410,7 +11151,7 @@
         let targetCurlAngle = 0;
         let currentCurlAngle = 0;
 
-        window.setCADTentacleCurl = function(angleDeg) {
+        window.setCADTentacleCurl = function (angleDeg) {
           targetCurlAngle = (angleDeg * Math.PI) / 180;
         };
 

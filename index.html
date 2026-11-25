@@ -6053,7 +6053,6 @@
         <a href="#bambu-additive">3D Printing</a>
         <a href="#cad-assembly">3D Assembly</a>
         <a href="#electronics">Electronics</a>
-        <a href="#development">Prototype</a>
         <a href="#troubleshooting">Troubleshooting</a>
         <a href="#applications">Applications</a>
         <a href="#team">Team</a>
@@ -6082,7 +6081,6 @@
     <a href="#bambu-additive" class="mobile-nav-link">Bambu Lab 3D Printing</a>
     <a href="#cad-assembly" class="mobile-nav-link">3D CAD Assembly</a>
     <a href="#electronics" class="mobile-nav-link">Electronics & Hardware</a>
-    <a href="#development" class="mobile-nav-link">From Design to Prototype</a>
     <a href="#troubleshooting" class="mobile-nav-link">Sequential Troubleshooting</a>
     <a href="#applications" class="mobile-nav-link">Potential Applications</a>
     <a href="#team" class="mobile-nav-link">Development Team</a>
@@ -9658,122 +9656,7 @@
       </div>
     </section>
 
-    <!-- =========================================================================
-       SECTION 10: CONTROL ARCHITECTURE & LIVE TELEMETRY BUS
-       ========================================================================= -->
-
-
-    <section id="development">
-      <div class="container">
-        <div class="section-header" style="text-align: center; margin-bottom: 32px;">
-          <div class="section-eyebrow">Engineering Workflow & Validation</div>
-          <h2 class="section-title">From Design to Prototype</h2>
-          <p class="section-desc" style="max-width: 720px; margin: 0 auto;">
-            The 4-stage engineering workflow from biological observation and SolidWorks CAD modeling to precision 3D
-            printing and complete hardware integration.
-          </p>
-        </div>
-
-        <div class="timeline-vertical">
-          <!-- Stage 01 -->
-          <div class="timeline-entry">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content-flex">
-              <div>
-                <div class="timeline-stage">Stage 01</div>
-                <h3 class="timeline-heading">1. Bio-Inspired Concept & Continuum Kinematics</h3>
-                <p class="timeline-body">
-                  Mathematical modeling of muscular hydrostat mechanics. Formulating logarithmic spiral taper equations
-                  to deliver smooth, variable curvature grasping across the continuum spine.
-                </p>
-              </div>
-              <div class="timeline-thumb"
-                onclick="openPhotoViewer('assets/stage1_concept_biomimetic.png', 'Stage 1: Bio-Inspired Concept Development', 'Logarithmic Spiral Mathematical Modeling')"
-                style="cursor: pointer;">
-                <img src="assets/stage1_concept_biomimetic.png" alt="Stage 1: Bio-Inspired Concept Development"
-                  loading="lazy">
-              </div>
-            </div>
-          </div>
-
-          <!-- Stage 02 -->
-          <div class="timeline-entry">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content-flex">
-              <div>
-                <div class="timeline-stage">Stage 02</div>
-                <h3 class="timeline-heading">2. Parametric SolidWorks CAD Modeling</h3>
-                <p class="timeline-body">
-                  Full 3D parametric CAD modeling in SolidWorks. Precision engineering of interlocking clevis hinges,
-                  integrated cable guide eyelets, rigid actuator mounts, and enclosure chassis.
-                </p>
-              </div>
-              <div class="timeline-thumb"
-                onclick="openPhotoViewer('assets/stage2_solidworks_cad.jpg', 'Stage 2: Parametric SolidWorks CAD Modeling', 'SolidWorks CAD Architecture')"
-                style="cursor: pointer;">
-                <img src="assets/stage2_solidworks_cad.jpg" alt="Stage 2: Parametric SolidWorks CAD Modeling"
-                  loading="lazy">
-              </div>
-            </div>
-          </div>
-
-          <!-- Stage 03 -->
-          <div class="timeline-entry">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content-flex">
-              <div>
-                <div class="timeline-stage">Stage 03</div>
-                <h3 class="timeline-heading">3. Precision 3D Printing of Continuum Vertebrae</h3>
-                <p class="timeline-body">
-                  Additive manufacturing on Bambu Lab high-speed 3D printers using engineered PLA/PETG. High perimeter
-                  wall density for unbreakable pivot hinges and frictionless cable passages.
-                </p>
-              </div>
-              <div class="timeline-thumb"
-                onclick="openPhotoViewer('assets/stage3_3d_printing_bambu.jpg', 'Stage 3: 3D Printing Vertebrae on Bambu Lab', 'Additive Manufacturing on High-Speed Printers')"
-                style="cursor: pointer;">
-                <img src="assets/stage3_3d_printing_bambu.jpg" alt="Stage 3: 3D Printing Vertebrae on Bambu Lab"
-                  loading="lazy">
-              </div>
-            </div>
-          </div>
-
-          <!-- Stage 04 -->
-          <div class="timeline-entry">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content-flex">
-              <div>
-                <div class="timeline-stage">Stage 04</div>
-                <h3 class="timeline-heading">4. Complete Hardware & Actuation Integration</h3>
-                <p class="timeline-body">
-                  Mechanical pin-joint assembly of the 3D-printed continuum spine, mounting dual N20 gearmotors into
-                  chassis retention bosses, routing antagonist tendon cables through eyelets, and connecting the L298N
-                  motor driver to the ESP32 microcontroller with dynamic motion verification.
-                </p>
-              </div>
-              <div class="timeline-thumbs-group"
-                style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
-                <div class="timeline-thumb"
-                  onclick="openPhotoViewer('assets/stage4_5_6_assembled_hardware.jpg', 'Stage 4: Complete Hardware Integration', 'Assembled Continuum Spine, Actuators & ESP32 Electronics')"
-                  style="cursor: pointer;" title="Hardware Assembly">
-                  <img src="assets/stage4_5_6_assembled_hardware.jpg"
-                    alt="Stage 4: Complete Hardware & Actuation Integration" loading="lazy">
-                </div>
-                <div class="timeline-thumb timeline-video-thumb"
-                  onclick="openPhotoViewer('assets/stage7_motion_testing.mp4', 'Motion Testing & Dynamic Kinematics Verification', 'Live Bench Testing • Permanently Muted')"
-                  style="cursor: pointer; position: relative;" title="Physical Articulation Verification (Muted)">
-                  <video src="assets/stage7_motion_testing.mp4" autoplay loop muted playsinline disablepictureinpicture
-                    disableremoteplayback preload="auto"
-                    style="width: 100%; height: 100%; object-fit: cover; display: block;"
-                    poster="assets/stage4_5_6_assembled_hardware.jpg"></video>
-                  <div class="video-live-badge">▶ MOTION TEST</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- =========================================================================
          SECTION: ENGINEERING CHALLENGES & SEQUENTIAL TROUBLESHOOTING
@@ -10177,7 +10060,6 @@
             <li><a href="#gallery">SolidWorks Designed Parts</a></li>
             <li><a href="#cad-assembly">3D Mechanical Assembly</a></li>
             <li><a href="#electronics">Electronics & Hardware</a></li>
-            <li><a href="#development">From Design to Prototype</a></li>
             <li><a href="#applications">Potential Applications</a></li>
           </ul>
         </div>

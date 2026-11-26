@@ -6045,7 +6045,6 @@
         <a href="#solution">Solution</a>
         <a href="#principle">Principle</a>
         <a href="#mechanical">Mechanical</a>
-        <a href="#lasercad-cutting">Laser Cutting</a>
         <a href="#gallery">CAD Parts</a>
         <a href="#bambu-additive">3D Printing</a>
         <a href="#cad-assembly">3D Assembly</a>
@@ -6053,6 +6052,7 @@
         <a href="#troubleshooting">Troubleshooting</a>
         <a href="#applications">Applications</a>
         <a href="#team">Team</a>
+        <a href="#new-things-learned">New Learnings</a>
       </nav>
 
       <button class="hamburger-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu">
@@ -6074,7 +6074,6 @@
     <a href="#solution" class="mobile-nav-link">Our Solution</a>
     <a href="#principle" class="mobile-nav-link">Working Principle</a>
     <a href="#mechanical" class="mobile-nav-link">Mechanical Architecture</a>
-    <a href="#lasercad-cutting" class="mobile-nav-link">Laser Cutting (LaserCAD)</a>
     <a href="#gallery" class="mobile-nav-link">SolidWorks CAD Parts</a>
     <a href="#bambu-additive" class="mobile-nav-link">Bambu Lab 3D Printing</a>
     <a href="#cad-assembly" class="mobile-nav-link">3D CAD Assembly</a>
@@ -6082,6 +6081,7 @@
     <a href="#troubleshooting" class="mobile-nav-link">Sequential Troubleshooting</a>
     <a href="#applications" class="mobile-nav-link">Potential Applications</a>
     <a href="#team" class="mobile-nav-link">Development Team</a>
+    <a href="#new-things-learned" class="mobile-nav-link">New Things Learned</a>
   </div>
 
   <main>
@@ -6742,398 +6742,7 @@
     <!-- =========================================================================
          SECTION: LASER CUTTING & DESIGN PREPARATION (LASERCAD V8.28)
          ========================================================================= -->
-    <section id="lasercad-cutting" class="bambu-section">
-      <div class="container" style="max-width: 1400px; padding: 0 20px;">
-        <!-- Section Header -->
-        <div class="section-header" style="text-align: center; margin-bottom: 36px;">
-          <div class="section-eyebrow" style="color: #f59e0b;">Subtractive Manufacturing & CNC Laser Processing</div>
-          <h2 class="section-title">Laser Cutting & Design Preparation</h2>
-          <p class="section-desc" style="max-width: 780px; margin: 0 auto;">
-            Engineering documentation of CO₂ laser cutting and engraving workflows: vector design preparation, layer-based operation mapping, material-specific parameter configuration, and machine safety protocols using LaserCAD V8.28.
-          </p>
-        </div>
-
-        <!-- 1. Introduction & 2. Machine Overview Grid -->
-        <div class="bambu-intro-grid">
-          <!-- 1. Introduction to Laser Cutting -->
-          <div class="bambu-card">
-            <h3 class="bambu-card-title">1. Introduction to Laser Cutting</h3>
-            <div class="bambu-about-layout">
-              <div class="bambu-about-text">
-                <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px;">
-                  <strong>Laser cutting</strong> is a non-contact thermal manufacturing process that utilizes a focused, high-power coherent laser beam to melt, vaporize, or burn through materials with high dimensional precision. By directing the concentrated optical energy through a CNC-controlled motion system, it enables both clean vector profiling (cutting) and controlled surface vaporization (raster engraving).
-                </p>
-                <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 18px;">
-                  Widely applied in industrial manufacturing, rapid prototyping, and engineering product development, laser cutting produces complex mechanical contours with minimal kerf width and zero mechanical tool wear.
-                </p>
-                <div style="margin-top: auto;">
-                  <div style="font-family: var(--font-mono); font-size: 0.6875rem; color: #94a3b8; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.05em;">Materials Covered in Our Session:</div>
-                  <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                    <span class="proto-tag">Acrylic</span>
-                    <span class="proto-tag">MDF</span>
-                    <span class="proto-tag">Cardboard</span>
-                    <span class="proto-tag">Paper</span>
-                    <span class="proto-tag">Leather</span>
-                    <span class="proto-tag">Thermocol</span>
-                  </div>
-                </div>
-              </div>
-              <div class="bambu-about-media"
-                onclick="openPhotoViewer('assets/images/lasercad/sil_laser_cutting_machine.jpg', 'SIL Laser Cutting Machine — Makerspace Hardware', 'Physical SIL industrial CO₂ laser cutting machine at Sanjivani University Makerspace.')"
-                title="Click to Inspect in High-Res Lightbox">
-                <img src="assets/images/lasercad/sil_laser_cutting_machine.jpg"
-                  alt="SIL Laser Cutting Machine at Sanjivani University Makerspace" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;">
-                <div class="bambu-media-badge">Makerspace Laser Cutter</div>
-                <div class="proto-thumb-overlay">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 2. Laser Cutting Machine Overview -->
-          <div class="bambu-card">
-            <h3 class="bambu-card-title">2. Laser Cutting Machine Overview</h3>
-            <table class="bambu-specs-table">
-              <tbody>
-                <tr>
-                  <td>Laser Source</td>
-                  <td class="bambu-spec-val-highlight">Generates coherent high-power infrared laser beam</td>
-                </tr>
-                <tr>
-                  <td>Cutting Head</td>
-                  <td>Houses focusing optics, focal lens, and assist gas nozzle</td>
-                </tr>
-                <tr>
-                  <td>Working Bed</td>
-                  <td>Supports workpiece (slat / honeycomb structure) with CNC motion</td>
-                </tr>
-                <tr>
-                  <td>Water Chiller</td>
-                  <td class="bambu-spec-val-green">Active water circulation to maintain safe tube operating temp</td>
-                </tr>
-                <tr>
-                  <td>Air Compressor</td>
-                  <td class="bambu-spec-val-green">Provides air assist at nozzle to clear debris & extinguish flame</td>
-                </tr>
-                <tr>
-                  <td>Control System</td>
-                  <td>DSP controller interpreting vector commands & stepper pulses</td>
-                </tr>
-                <tr>
-                  <td>Exhaust / Ventilation</td>
-                  <td>Centrifugal blower exhausting thermal fumes and smoke safely</td>
-                </tr>
-                <tr>
-                  <td>Power Supply Unit</td>
-                  <td>High-voltage DC excitation power powering laser tube discharge</td>
-                </tr>
-              </tbody>
-            </table>
-            <div style="margin-top: 14px; padding: 10px 14px; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: var(--radius-sm); font-size: 0.75rem; color: #f59e0b; line-height: 1.45;">
-              <strong>Operational Requirement:</strong> Always power on the industrial water chiller and air compressor before operating the laser cutter. The chiller prevents thermal degradation of the laser tube, the compressor prevents lens contamination, and the stabilized power supply ensures consistent beam output.
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. Software Used – LaserCAD V8.28 -->
-        <div class="bambu-results-panel" style="margin-bottom: 44px;">
-          <div class="bambu-results-header">
-            <h3 class="bambu-results-title">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
-              3. Software Used — LaserCAD V8.28
-            </h3>
-            <span class="bambu-results-disclaimer">Computer-Aided Manufacturing (CAM) • CNC Laser Controller</span>
-          </div>
-          <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 18px;">
-            <strong>LaserCAD V8.28</strong> is the dedicated CAM software interface connecting the digital CAD design environment with the physical CNC laser cutting machine. It translates geometric curves, vector sketches, and raster text into G-code toolpaths and laser power commands transmitted via serial communication (COM34).
-          </p>
-          <div class="bambu-metrics-grid" style="grid-template-columns: repeat(3, 1fr); gap: 14px;">
-            <div class="bambu-metric-card" style="text-align: left;">
-              <div style="font-size: 0.875rem; font-weight: 700; color: #38bdf8; margin-bottom: 4px;">1. Design Import & Preparation</div>
-              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4;">Imports DXF, PLT, AI vector files and bitmaps for precise positioning within the 1200 × 900 mm machine coordinate space.</div>
-            </div>
-            <div class="bambu-metric-card" style="text-align: left;">
-              <div style="font-size: 0.875rem; font-weight: 700; color: #38bdf8; margin-bottom: 4px;">2. Shape & Text Generation</div>
-              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4;">Onboard vector drawing tools to generate boundary contours (circles, ovals, rectangles) and typographic text elements.</div>
-            </div>
-            <div class="bambu-metric-card" style="text-align: left;">
-              <div style="font-size: 0.875rem; font-weight: 700; color: #38bdf8; margin-bottom: 4px;">3. Dimensioning & Alignment</div>
-              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4;">Parametric sizing, proportional scaling, centering, and origin point alignment relative to machine datum coordinates.</div>
-            </div>
-            <div class="bambu-metric-card" style="text-align: left;">
-              <div style="font-size: 0.875rem; font-weight: 700; color: #10b981; margin-bottom: 4px;">4. Layer & Colour Management</div>
-              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4;">Assigns distinct colour layers to segregate operational modes (e.g. Red for vector cut profiling, Black for surface raster engraving).</div>
-            </div>
-            <div class="bambu-metric-card" style="text-align: left;">
-              <div style="font-size: 0.875rem; font-weight: 700; color: #10b981; margin-bottom: 4px;">5. Power & Speed Configuration</div>
-              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4;">Sets individual travel speed (mm/s), peak laser tube power (%), and processing mode per layer according to the material chart.</div>
-            </div>
-            <div class="bambu-metric-card" style="text-align: left;">
-              <div style="font-size: 0.875rem; font-weight: 700; color: #10b981; margin-bottom: 4px;">6. Machine Transmission</div>
-              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4;">Compiles cutting sequence and downloads motion code directly to machine memory or starts live job execution over USB/LAN.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. Design Preparation and LaserCAD Workflow (7 Steps) -->
-        <div style="margin-bottom: 24px;">
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; display: flex; align-items: center; gap: 10px;">
-            <span style="color: #38bdf8;">4. Design Preparation & LaserCAD Workflow</span>
-          </h3>
-          <p style="font-size: 0.8125rem; color: var(--text-muted); margin: 0 0 20px 0;">
-            Chronological engineering workflow executed during the practical session to prepare and fabricate the laser-cut name design.
-          </p>
-        </div>
-
-        <div class="bambu-workflow-grid" style="grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 48px;">
-          <!-- Step 1 -->
-          <div class="bambu-step-card"
-            onclick="openPhotoViewer('assets/images/lasercad/lasercad_step1_border.png', 'Step 1: Create the Border Shape', 'Created a circle or rectangle to form the outer border of the name design.')">
-            <div class="bambu-step-thumb">
-              <img src="assets/images/lasercad/lasercad_step1_border.png" alt="Step 1: Create the Border Shape in LaserCAD" loading="lazy">
-              <span class="bambu-step-badge">Step 01</span>
-              <div class="bambu-step-overlay">
-                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
-              </div>
-            </div>
-            <div class="bambu-step-body">
-              <div class="bambu-step-title">Create the Border Shape</div>
-              <p class="bambu-step-desc">
-                Created a circle or rectangle to form the outer border of the name design.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="bambu-step-card"
-            onclick="openPhotoViewer('assets/images/lasercad/lasercad_step2_text.png', 'Step 2: Add Text', 'Inserted the required name inside the border using the text tool in LaserCAD.')">
-            <div class="bambu-step-thumb">
-              <img src="assets/images/lasercad/lasercad_step2_text.png" alt="Step 2: Add Text inside Border" loading="lazy">
-              <span class="bambu-step-badge">Step 02</span>
-              <div class="bambu-step-overlay">
-                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
-              </div>
-            </div>
-            <div class="bambu-step-body">
-              <div class="bambu-step-title">Add Text</div>
-              <p class="bambu-step-desc">
-                Inserted the required name inside the border using the text tool in LaserCAD.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="bambu-step-card"
-            onclick="openPhotoViewer('assets/images/lasercad/lasercad_step3_colors.png', 'Step 3: Assign Colours for Operations', 'Assigned different colours to distinguish cutting and engraving operations. Red represents cutting and black represents engraving in our design.')">
-            <div class="bambu-step-thumb">
-              <img src="assets/images/lasercad/lasercad_step3_colors.png" alt="Step 3: Assign Colours for Operations" loading="lazy">
-              <span class="bambu-step-badge">Step 03</span>
-              <div class="bambu-step-overlay">
-                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
-              </div>
-            </div>
-            <div class="bambu-step-body">
-              <div class="bambu-step-title">Assign Colours for Operations</div>
-              <p class="bambu-step-desc">
-                Assigned different colours to distinguish cutting and engraving operations. Red represents cutting and black represents engraving in our design.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="bambu-step-card"
-            onclick="openPhotoViewer('assets/images/lasercad/lasercad_step4_parameters.png', 'Step 4: Configure Power and Speed', 'Selected suitable laser power and speed parameters according to the material and the provided parameter chart.')">
-            <div class="bambu-step-thumb" style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
-              <img src="assets/images/lasercad/lasercad_step4_parameters.png" alt="Step 4: Configure Power and Speed" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; padding: 6px; display: block;">
-              <span class="bambu-step-badge">Step 04</span>
-              <div class="bambu-step-overlay" style="background: rgba(10, 14, 22, 0.9); color: #38bdf8;">
-                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
-              </div>
-            </div>
-            <div class="bambu-step-body">
-              <div class="bambu-step-title">Configure Power and Speed</div>
-              <p class="bambu-step-desc">
-                Selected suitable laser power and speed parameters according to the material and the provided parameter chart.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 5 -->
-          <div class="bambu-step-card"
-            onclick="openPhotoViewer('assets/images/lasercad/lasercad_step3_colors.png', 'Step 5: Review Design and Parameters', 'Checked the design layout, dimensions, colours and assigned parameters before sending it for processing.')">
-            <div class="bambu-step-thumb">
-              <img src="assets/images/lasercad/lasercad_step3_colors.png" alt="Step 5: Review Design and Parameters" loading="lazy">
-              <span class="bambu-step-badge">Step 05</span>
-              <div class="bambu-step-overlay">
-                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
-              </div>
-            </div>
-            <div class="bambu-step-body">
-              <div class="bambu-step-title">Review Design and Parameters</div>
-              <p class="bambu-step-desc">
-                Checked the design layout, dimensions, colours and assigned parameters before sending it for processing.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 6 -->
-          <div class="bambu-step-card"
-            onclick="openPhotoViewer('assets/images/lasercad/lasercad_acrylic_output.jpg', 'Step 6: Laser Cutting and Engraving', 'The prepared design was processed using the laser cutting machine to produce the final name design.')">
-            <div class="bambu-step-thumb">
-              <img src="assets/images/lasercad/lasercad_acrylic_output.jpg" alt="Step 6: Laser Cutting and Engraving Output" loading="lazy">
-              <span class="bambu-step-badge">Step 06</span>
-              <div class="bambu-step-overlay">
-                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
-              </div>
-            </div>
-            <div class="bambu-step-body">
-              <div class="bambu-step-title">Laser Cutting and Engraving</div>
-              <p class="bambu-step-desc">
-                The prepared design was processed using the laser cutting machine to produce the final name design.
-              </p>
-            </div>
-          </div>
-        </div>
-
-<!-- 6. Machine Safety and Precautions Grid -->
-        <div class="bambu-results-panel" style="margin-bottom: 44px; border-color: rgba(239, 68, 68, 0.25);">
-          <div class="bambu-results-header">
-            <h3 class="bambu-results-title" style="color: #ef4444;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-              6. Machine Safety & Operational Precautions
-            </h3>
-            <span class="bambu-results-disclaimer" style="color: #ef4444; border-color: rgba(239, 68, 68, 0.3);">Makerspace Standard Operating Procedure (SOP)</span>
-          </div>
-
-          <div class="bambu-metrics-grid" style="grid-template-columns: repeat(4, 1fr); gap: 14px;">
-            <div class="bambu-metric-card" style="text-align: left; border-left: 2px solid #ef4444;">
-              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">1. Chiller Verification</div>
-              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45;">Always confirm cooling water flow and temperature before powering on laser tube.</div>
-            </div>
-            <div class="bambu-metric-card" style="text-align: left; border-left: 2px solid #ef4444;">
-              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">2. Exhaust & Air Assist</div>
-              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45;">Ensure the extraction blower and air compressor are operating to evacuate toxic fumes and combustion gases.</div>
-            </div>
-            <div class="bambu-metric-card" style="text-align: left; border-left: 2px solid #ef4444;">
-              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">3. Clean Work Area</div>
-              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45;">Clear combustible debris, cut-off scraps, and dust from the honeycomb bed and crumb tray.</div>
-            </div>
-            <div class="bambu-metric-card" style="text-align: left; border-left: 2px solid #ef4444;">
-              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">4. Clear of Moving Gantry</div>
-              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45;">Never place hands or tools inside the enclosure while the CNC motion head is active.</div>
-            </div>
-            <div class="bambu-metric-card" style="text-align: left; border-left: 2px solid #ef4444;">
-              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">5. Electrical Safety</div>
-              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45;">Adhere to high-voltage isolation guidelines and verify earth ground continuity before machine energization.</div>
-            </div>
-            <div class="bambu-metric-card" style="text-align: left; border-left: 2px solid #ef4444;">
-              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">6. Never Leave Unattended</div>
-              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45;">Maintain continuous visual supervision throughout the active cut to immediately suppress flash fires.</div>
-            </div>
-            <div class="bambu-metric-card" style="text-align: left; border-left: 2px solid #ef4444;">
-              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">7. Supervised Operation</div>
-              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45;">Operate the equipment strictly under authorized lab technician or makerspace supervisor guidance.</div>
-            </div>
-            <div class="bambu-metric-card" style="text-align: left; border-left: 2px solid #ef4444;">
-              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">8. Manufacturer Compliance</div>
-              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45;">Follow all machine manufacturer emergency shutoff, interlock lid, and maintenance protocols.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. Final Output and Results Showcase -->
-        <div class="bambu-fabrication-block">
-          <div class="bambu-fab-header">
-            <div class="bambu-fab-badge" style="border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.1); color: #10b981;">
-              <span class="bambu-pulse-dot"></span>
-              <span>Physical Fabrication • Practical Session Deliverable</span>
-            </div>
-            <h3 class="bambu-fab-title">
-              7. Final Output & Verification Results
-            </h3>
-            <p class="bambu-fab-subtitle">
-              The practical session involved preparing a vector border shape, generating name typography in LaserCAD V8.28, mapping dual operational layers (Black for raster scan engraving and Red for vector cut profiling), configuring laser power and speed, and manufacturing the physical acrylic badge on the laser cutting machine.
-            </p>
-          </div>
-
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch;">
-            <!-- Output Photo Card -->
-            <div class="bambu-fab-card"
-              onclick="openPhotoViewer('assets/images/lasercad/lasercad_acrylic_output.jpg', 'Final Laser Cut & Engraved Output — OM Acrylic Badge', 'Physical acrylic name badge manufactured during the session, demonstrating frosted raster engraving and smooth polished vector edge cut.')">
-              <div class="bambu-fab-media" style="height: 280px;">
-                <img src="assets/images/lasercad/lasercad_acrylic_output.jpg" alt="Physical Laser Cut Acrylic Badge" loading="lazy">
-                <div class="bambu-fab-media-overlay">
-                  <div class="bambu-fab-tag-top">
-                    <span class="bambu-tag-icon">●</span> Verified Physical Output
-                  </div>
-                  <div class="bambu-fab-zoom-badge">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View High-Res
-                  </div>
-                </div>
-              </div>
-              <div class="bambu-fab-info">
-                <div class="bambu-fab-card-title-row">
-                  <span class="bambu-fab-card-title">Clear Acrylic Name Badge</span>
-                  <span class="bambu-fab-status-pill green">Pass • Accurate Execution</span>
-                </div>
-                <p class="bambu-fab-card-desc">
-                  Physical laser-cut result fabricated from transparent acrylic. Demonstrates uniform frosted surface vaporization across the "OM" typography (engraved at 300 mm/s, 20% power) and flame-polished edge profile along the elliptical outer border (cut at 100 mm/s, 20% power).
-                </p>
-                <div class="bambu-fab-meta-pills">
-                  <span>Material: Transparent Acrylic</span>
-                  <span>Engrave: Black Layer (300 mm/s, 20%)</span>
-                  <span>Cut: Red Layer (100 mm/s, 20%)</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Parameters & Telemetry Verification Card -->
-            <div class="bambu-fab-card"
-              onclick="openPhotoViewer('assets/images/lasercad/lasercad_step4_parameters.png', 'LaserCAD Layer Parameters Panel', 'Control Panel Layer Options showing Black Engrave (300 mm/s, 20% power) and Red Cut (100 mm/s, 20% power) with COM34 link.')">
-              <div class="bambu-fab-media" style="height: 280px; background: #fff;">
-                <img src="assets/images/lasercad/lasercad_step4_parameters.png" alt="LaserCAD Control Panel Layer Settings" style="object-fit: contain; padding: 12px;" loading="lazy">
-                <div class="bambu-fab-media-overlay">
-                  <div class="bambu-fab-tag-top" style="background: rgba(10, 14, 22, 0.9);">
-                    <span class="bambu-tag-icon pulse-orange">●</span> LaserCAD CAM Telemetry
-                  </div>
-                  <div class="bambu-fab-zoom-badge">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View High-Res
-                  </div>
-                </div>
-              </div>
-              <div class="bambu-fab-info">
-                <div class="bambu-fab-card-title-row">
-                  <span class="bambu-fab-card-title">CAM Layer Configuration</span>
-                  <span class="bambu-fab-status-pill blue">COM34 • Dual Layer Mapping</span>
-                </div>
-                <p class="bambu-fab-card-desc">
-                  Software confirmation of the dual-layer configuration inside LaserCAD V8.28. The black layer was assigned for surface raster scanning while the red layer governed the boundary cut, verifying accurate parameter execution on the physical laser cutter.
-                </p>
-                <div class="bambu-fab-meta-pills">
-                  <span>Communication: MachName COM34</span>
-                  <span>Black Layer: Mode Engrave (Output Checked)</span>
-                  <span>Red Layer: Mode Cut (Output Checked)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 8. Conclusion Box -->
-        <div class="bambu-conclusion-box">
-          <div class="bambu-conclusion-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <div class="bambu-conclusion-content">
-            <h4>8. Conclusion: Practical Subtractive Prototyping Synthesis</h4>
-            <p>
-              The practical session provided comprehensive hands-on competency in laser cutting fundamentals, computer-aided manufacturing with LaserCAD V8.28, multi-layer vector design preparation, material-specific parameter selection, and essential machine safety protocols. Mastering the interplay between laser power, transit speed, and substrate characteristics enables rapid, reliable production of custom structural plates, enclosures, and precision components for engineering prototypes.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <section id="gallery" class="inside-spirobe-section">
       <div class="container" style="max-width: 1400px; padding: 0 20px;">
@@ -10395,6 +10004,400 @@
         </div>
       </div>
     </section>
+  
+<section id="new-things-learned" class="bambu-section">
+      <span id="lasercad-cutting" style="display:block; position:relative; top:-80px; visibility:hidden;"></span>
+      <div class="container" style="max-width: 1400px; padding: 0 20px;">
+        <!-- Section Header -->
+        <div class="section-header" style="text-align: center; margin-bottom: 36px;">
+          <div class="section-eyebrow" style="color: #f59e0b;">Makerspace Skill Acquisition & Practical Fabrication</div>
+          <h2 class="section-title">New Things Learned During Project</h2>
+          <p class="section-desc" style="max-width: 780px; margin: 0 auto;">
+            Engineering documentation of CO₂ laser cutting and engraving workflows: vector design preparation, layer-based operation mapping, material-specific parameter configuration, and machine safety protocols using LaserCAD V8.28.
+          </p>
+        </div>
+
+        <!-- 1. Introduction & 2. Machine Overview Grid -->
+        <div class="bambu-intro-grid">
+          <!-- 1. Introduction to Laser Cutting -->
+          <div class="bambu-card">
+            <h3 class="bambu-card-title">1. Introduction to Laser Cutting</h3>
+            <div class="bambu-about-layout">
+              <div class="bambu-about-text">
+                <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px;">
+                  <strong>Laser cutting</strong> is a non-contact thermal manufacturing process that utilizes a focused, high-power coherent laser beam to melt, vaporize, or burn through materials with high dimensional precision. By directing the concentrated optical energy through a CNC-controlled motion system, it enables both clean vector profiling (cutting) and controlled surface vaporization (raster engraving).
+                </p>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 18px;">
+                  Widely applied in industrial manufacturing, rapid prototyping, and engineering product development, laser cutting produces complex mechanical contours with minimal kerf width and zero mechanical tool wear.
+                </p>
+                <div style="margin-top: auto;">
+                  <div style="font-family: var(--font-mono); font-size: 0.6875rem; color: #94a3b8; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.05em;">Materials Covered in Our Session:</div>
+                  <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                    <span class="proto-tag">Acrylic</span>
+                    <span class="proto-tag">MDF</span>
+                    <span class="proto-tag">Cardboard</span>
+                    <span class="proto-tag">Paper</span>
+                    <span class="proto-tag">Leather</span>
+                    <span class="proto-tag">Thermocol</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bambu-about-media"
+                onclick="openPhotoViewer('assets/images/lasercad/sil_laser_cutting_machine.jpg', 'SIL Laser Cutting Machine — Makerspace Hardware', 'Physical SIL industrial CO₂ laser cutting machine at Sanjivani University Makerspace.')"
+                title="Click to Inspect in High-Res Lightbox">
+                <img src="assets/images/lasercad/sil_laser_cutting_machine.jpg"
+                  alt="SIL Laser Cutting Machine at Sanjivani University Makerspace" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;">
+                <div class="bambu-media-badge">Makerspace Laser Cutter</div>
+                <div class="proto-thumb-overlay">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Laser Cutting Machine Overview -->
+          <div class="bambu-card">
+            <h3 class="bambu-card-title">2. Laser Cutting Machine Overview</h3>
+            <table class="bambu-specs-table">
+              <tbody>
+                <tr>
+                  <td>Laser Source</td>
+                  <td class="bambu-spec-val-highlight">Generates coherent high-power infrared laser beam</td>
+                </tr>
+                <tr>
+                  <td>Cutting Head</td>
+                  <td>Houses focusing optics, focal lens, and assist gas nozzle</td>
+                </tr>
+                <tr>
+                  <td>Working Bed</td>
+                  <td>Supports workpiece (slat / honeycomb structure) with CNC motion</td>
+                </tr>
+                <tr>
+                  <td>Water Chiller</td>
+                  <td class="bambu-spec-val-green">Active water circulation to maintain safe tube operating temp</td>
+                </tr>
+                <tr>
+                  <td>Air Compressor</td>
+                  <td class="bambu-spec-val-green">Provides air assist at nozzle to clear debris & extinguish flame</td>
+                </tr>
+                <tr>
+                  <td>Control System</td>
+                  <td>DSP controller interpreting vector commands & stepper pulses</td>
+                </tr>
+                <tr>
+                  <td>Exhaust / Ventilation</td>
+                  <td>Centrifugal blower exhausting thermal fumes and smoke safely</td>
+                </tr>
+                <tr>
+                  <td>Power Supply Unit</td>
+                  <td>High-voltage DC excitation power powering laser tube discharge</td>
+                </tr>
+              </tbody>
+            </table>
+            <div style="margin-top: 14px; padding: 10px 14px; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: var(--radius-sm); font-size: 0.75rem; color: #f59e0b; line-height: 1.45;">
+              <strong>Operational Requirement:</strong> Always power on the industrial water chiller and air compressor before operating the laser cutter. The chiller prevents thermal degradation of the laser tube, the compressor prevents lens contamination, and the stabilized power supply ensures consistent beam output.
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Software Used – LaserCAD V8.28 -->
+        <div class="bambu-results-panel" style="margin-bottom: 44px;">
+          <div class="bambu-results-header">
+            <h3 class="bambu-results-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+              3. Software Used — LaserCAD V8.28
+            </h3>
+            <span class="bambu-results-disclaimer">Computer-Aided Manufacturing (CAM) • CNC Laser Controller</span>
+          </div>
+          <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 18px;">
+            <strong>LaserCAD V8.28</strong> is the dedicated CAM software interface connecting the digital CAD design environment with the physical CNC laser cutting machine. It translates geometric curves, vector sketches, and raster text into G-code toolpaths and laser power commands transmitted via serial communication (COM34).
+          </p>
+          <div class="bambu-metrics-grid" style="grid-template-columns: repeat(3, 1fr); gap: 14px;">
+            <div class="bambu-metric-card" style="text-align: left;">
+              <div style="font-size: 0.875rem; font-weight: 700; color: #38bdf8; margin-bottom: 4px;">1. Design Import & Preparation</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4;">Imports DXF, PLT, AI vector files and bitmaps for precise positioning within the 1200 × 900 mm machine coordinate space.</div>
+            </div>
+            <div class="bambu-metric-card" style="text-align: left;">
+              <div style="font-size: 0.875rem; font-weight: 700; color: #38bdf8; margin-bottom: 4px;">2. Shape & Text Generation</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4;">Onboard vector drawing tools to generate boundary contours (circles, ovals, rectangles) and typographic text elements.</div>
+            </div>
+            <div class="bambu-metric-card" style="text-align: left;">
+              <div style="font-size: 0.875rem; font-weight: 700; color: #38bdf8; margin-bottom: 4px;">3. Dimensioning & Alignment</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4;">Parametric sizing, proportional scaling, centering, and origin point alignment relative to machine datum coordinates.</div>
+            </div>
+            <div class="bambu-metric-card" style="text-align: left;">
+              <div style="font-size: 0.875rem; font-weight: 700; color: #10b981; margin-bottom: 4px;">4. Layer & Colour Management</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4;">Assigns distinct colour layers to segregate operational modes (e.g. Red for vector cut profiling, Black for surface raster engraving).</div>
+            </div>
+            <div class="bambu-metric-card" style="text-align: left;">
+              <div style="font-size: 0.875rem; font-weight: 700; color: #10b981; margin-bottom: 4px;">5. Power & Speed Configuration</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4;">Sets individual travel speed (mm/s), peak laser tube power (%), and processing mode per layer according to the material chart.</div>
+            </div>
+            <div class="bambu-metric-card" style="text-align: left;">
+              <div style="font-size: 0.875rem; font-weight: 700; color: #10b981; margin-bottom: 4px;">6. Machine Transmission</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4;">Compiles cutting sequence and downloads motion code directly to machine memory or starts live job execution over USB/LAN.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Design Preparation and LaserCAD Workflow (7 Steps) -->
+        <div style="margin-bottom: 24px;">
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; display: flex; align-items: center; gap: 10px;">
+            <span style="color: #38bdf8;">4. Design Preparation & LaserCAD Workflow</span>
+          </h3>
+          <p style="font-size: 0.8125rem; color: var(--text-muted); margin: 0 0 20px 0;">
+            Chronological engineering workflow executed during the practical session to prepare and fabricate the laser-cut name design.
+          </p>
+        </div>
+
+        <div class="bambu-workflow-grid" style="grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 48px;">
+          <!-- Step 1 -->
+          <div class="bambu-step-card"
+            onclick="openPhotoViewer('assets/images/lasercad/lasercad_step1_border.png', 'Step 1: Create the Border Shape', 'Created a circle or rectangle to form the outer border of the name design.')">
+            <div class="bambu-step-thumb">
+              <img src="assets/images/lasercad/lasercad_step1_border.png" alt="Step 1: Create the Border Shape in LaserCAD" loading="lazy">
+              <span class="bambu-step-badge">Step 01</span>
+              <div class="bambu-step-overlay">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
+              </div>
+            </div>
+            <div class="bambu-step-body">
+              <div class="bambu-step-title">Create the Border Shape</div>
+              <p class="bambu-step-desc">
+                Created a circle or rectangle to form the outer border of the name design.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bambu-step-card"
+            onclick="openPhotoViewer('assets/images/lasercad/lasercad_step2_text.png', 'Step 2: Add Text', 'Inserted the required name inside the border using the text tool in LaserCAD.')">
+            <div class="bambu-step-thumb">
+              <img src="assets/images/lasercad/lasercad_step2_text.png" alt="Step 2: Add Text inside Border" loading="lazy">
+              <span class="bambu-step-badge">Step 02</span>
+              <div class="bambu-step-overlay">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
+              </div>
+            </div>
+            <div class="bambu-step-body">
+              <div class="bambu-step-title">Add Text</div>
+              <p class="bambu-step-desc">
+                Inserted the required name inside the border using the text tool in LaserCAD.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bambu-step-card"
+            onclick="openPhotoViewer('assets/images/lasercad/lasercad_step3_colors.png', 'Step 3: Assign Colours for Operations', 'Assigned different colours to distinguish cutting and engraving operations. Red represents cutting and black represents engraving in our design.')">
+            <div class="bambu-step-thumb">
+              <img src="assets/images/lasercad/lasercad_step3_colors.png" alt="Step 3: Assign Colours for Operations" loading="lazy">
+              <span class="bambu-step-badge">Step 03</span>
+              <div class="bambu-step-overlay">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
+              </div>
+            </div>
+            <div class="bambu-step-body">
+              <div class="bambu-step-title">Assign Colours for Operations</div>
+              <p class="bambu-step-desc">
+                Assigned different colours to distinguish cutting and engraving operations. Red represents cutting and black represents engraving in our design.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="bambu-step-card"
+            onclick="openPhotoViewer('assets/images/lasercad/lasercad_step4_parameters.png', 'Step 4: Configure Power and Speed', 'Selected suitable laser power and speed parameters according to the material and the provided parameter chart.')">
+            <div class="bambu-step-thumb" style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+              <img src="assets/images/lasercad/lasercad_step4_parameters.png" alt="Step 4: Configure Power and Speed" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; padding: 6px; display: block;">
+              <span class="bambu-step-badge">Step 04</span>
+              <div class="bambu-step-overlay" style="background: rgba(10, 14, 22, 0.9); color: #38bdf8;">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
+              </div>
+            </div>
+            <div class="bambu-step-body">
+              <div class="bambu-step-title">Configure Power and Speed</div>
+              <p class="bambu-step-desc">
+                Selected suitable laser power and speed parameters according to the material and the provided parameter chart.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="bambu-step-card"
+            onclick="openPhotoViewer('assets/images/lasercad/lasercad_step3_colors.png', 'Step 5: Review Design and Parameters', 'Checked the design layout, dimensions, colours and assigned parameters before sending it for processing.')">
+            <div class="bambu-step-thumb">
+              <img src="assets/images/lasercad/lasercad_step3_colors.png" alt="Step 5: Review Design and Parameters" loading="lazy">
+              <span class="bambu-step-badge">Step 05</span>
+              <div class="bambu-step-overlay">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
+              </div>
+            </div>
+            <div class="bambu-step-body">
+              <div class="bambu-step-title">Review Design and Parameters</div>
+              <p class="bambu-step-desc">
+                Checked the design layout, dimensions, colours and assigned parameters before sending it for processing.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="bambu-step-card"
+            onclick="openPhotoViewer('assets/images/lasercad/lasercad_acrylic_output.jpg', 'Step 6: Laser Cutting and Engraving', 'The prepared design was processed using the laser cutting machine to produce the final name design.')">
+            <div class="bambu-step-thumb">
+              <img src="assets/images/lasercad/lasercad_acrylic_output.jpg" alt="Step 6: Laser Cutting and Engraving Output" loading="lazy">
+              <span class="bambu-step-badge">Step 06</span>
+              <div class="bambu-step-overlay">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Zoom
+              </div>
+            </div>
+            <div class="bambu-step-body">
+              <div class="bambu-step-title">Laser Cutting and Engraving</div>
+              <p class="bambu-step-desc">
+                The prepared design was processed using the laser cutting machine to produce the final name design.
+              </p>
+            </div>
+          </div>
+        </div>
+
+<!-- 6. Machine Safety and Precautions Grid -->
+        <div class="bambu-results-panel" style="margin-bottom: 44px; border-color: rgba(239, 68, 68, 0.25);">
+          <div class="bambu-results-header">
+            <h3 class="bambu-results-title" style="color: #ef4444;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              6. Machine Safety & Operational Precautions
+            </h3>
+            <span class="bambu-results-disclaimer" style="color: #ef4444; border-color: rgba(239, 68, 68, 0.3);">Makerspace Standard Operating Procedure (SOP)</span>
+          </div>
+
+          <div class="bambu-metrics-grid" style="grid-template-columns: repeat(4, 1fr); gap: 14px;">
+            <div class="bambu-metric-card" style="text-align: left; border-left: 2px solid #ef4444;">
+              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">1. Chiller Verification</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45;">Always confirm cooling water flow and temperature before powering on laser tube.</div>
+            </div>
+            <div class="bambu-metric-card" style="text-align: left; border-left: 2px solid #ef4444;">
+              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">2. Exhaust & Air Assist</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45;">Ensure the extraction blower and air compressor are operating to evacuate toxic fumes and combustion gases.</div>
+            </div>
+            <div class="bambu-metric-card" style="text-align: left; border-left: 2px solid #ef4444;">
+              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">3. Clean Work Area</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45;">Clear combustible debris, cut-off scraps, and dust from the honeycomb bed and crumb tray.</div>
+            </div>
+            <div class="bambu-metric-card" style="text-align: left; border-left: 2px solid #ef4444;">
+              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">4. Clear of Moving Gantry</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45;">Never place hands or tools inside the enclosure while the CNC motion head is active.</div>
+            </div>
+            <div class="bambu-metric-card" style="text-align: left; border-left: 2px solid #ef4444;">
+              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">5. Electrical Safety</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45;">Adhere to high-voltage isolation guidelines and verify earth ground continuity before machine energization.</div>
+            </div>
+            <div class="bambu-metric-card" style="text-align: left; border-left: 2px solid #ef4444;">
+              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">6. Never Leave Unattended</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45;">Maintain continuous visual supervision throughout the active cut to immediately suppress flash fires.</div>
+            </div>
+            <div class="bambu-metric-card" style="text-align: left; border-left: 2px solid #ef4444;">
+              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">7. Supervised Operation</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45;">Operate the equipment strictly under authorized lab technician or makerspace supervisor guidance.</div>
+            </div>
+            <div class="bambu-metric-card" style="text-align: left; border-left: 2px solid #ef4444;">
+              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">8. Manufacturer Compliance</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.45;">Follow all machine manufacturer emergency shutoff, interlock lid, and maintenance protocols.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Final Output and Results Showcase -->
+        <div class="bambu-fabrication-block">
+          <div class="bambu-fab-header">
+            <div class="bambu-fab-badge" style="border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.1); color: #10b981;">
+              <span class="bambu-pulse-dot"></span>
+              <span>Physical Fabrication • Practical Session Deliverable</span>
+            </div>
+            <h3 class="bambu-fab-title">
+              7. Final Output & Verification Results
+            </h3>
+            <p class="bambu-fab-subtitle">
+              The practical session involved preparing a vector border shape, generating name typography in LaserCAD V8.28, mapping dual operational layers (Black for raster scan engraving and Red for vector cut profiling), configuring laser power and speed, and manufacturing the physical acrylic badge on the laser cutting machine.
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch;">
+            <!-- Output Photo Card -->
+            <div class="bambu-fab-card"
+              onclick="openPhotoViewer('assets/images/lasercad/lasercad_acrylic_output.jpg', 'Final Laser Cut & Engraved Output — OM Acrylic Badge', 'Physical acrylic name badge manufactured during the session, demonstrating frosted raster engraving and smooth polished vector edge cut.')">
+              <div class="bambu-fab-media" style="height: 280px;">
+                <img src="assets/images/lasercad/lasercad_acrylic_output.jpg" alt="Physical Laser Cut Acrylic Badge" loading="lazy">
+                <div class="bambu-fab-media-overlay">
+                  <div class="bambu-fab-tag-top">
+                    <span class="bambu-tag-icon">●</span> Verified Physical Output
+                  </div>
+                  <div class="bambu-fab-zoom-badge">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View High-Res
+                  </div>
+                </div>
+              </div>
+              <div class="bambu-fab-info">
+                <div class="bambu-fab-card-title-row">
+                  <span class="bambu-fab-card-title">Clear Acrylic Name Badge</span>
+                  <span class="bambu-fab-status-pill green">Pass • Accurate Execution</span>
+                </div>
+                <p class="bambu-fab-card-desc">
+                  Physical laser-cut result fabricated from transparent acrylic. Demonstrates uniform frosted surface vaporization across the "OM" typography (engraved at 300 mm/s, 20% power) and flame-polished edge profile along the elliptical outer border (cut at 100 mm/s, 20% power).
+                </p>
+                <div class="bambu-fab-meta-pills">
+                  <span>Material: Transparent Acrylic</span>
+                  <span>Engrave: Black Layer (300 mm/s, 20%)</span>
+                  <span>Cut: Red Layer (100 mm/s, 20%)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Parameters & Telemetry Verification Card -->
+            <div class="bambu-fab-card"
+              onclick="openPhotoViewer('assets/images/lasercad/lasercad_step4_parameters.png', 'LaserCAD Layer Parameters Panel', 'Control Panel Layer Options showing Black Engrave (300 mm/s, 20% power) and Red Cut (100 mm/s, 20% power) with COM34 link.')">
+              <div class="bambu-fab-media" style="height: 280px; background: #fff;">
+                <img src="assets/images/lasercad/lasercad_step4_parameters.png" alt="LaserCAD Control Panel Layer Settings" style="object-fit: contain; padding: 12px;" loading="lazy">
+                <div class="bambu-fab-media-overlay">
+                  <div class="bambu-fab-tag-top" style="background: rgba(10, 14, 22, 0.9);">
+                    <span class="bambu-tag-icon pulse-orange">●</span> LaserCAD CAM Telemetry
+                  </div>
+                  <div class="bambu-fab-zoom-badge">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View High-Res
+                  </div>
+                </div>
+              </div>
+              <div class="bambu-fab-info">
+                <div class="bambu-fab-card-title-row">
+                  <span class="bambu-fab-card-title">CAM Layer Configuration</span>
+                  <span class="bambu-fab-status-pill blue">COM34 • Dual Layer Mapping</span>
+                </div>
+                <p class="bambu-fab-card-desc">
+                  Software confirmation of the dual-layer configuration inside LaserCAD V8.28. The black layer was assigned for surface raster scanning while the red layer governed the boundary cut, verifying accurate parameter execution on the physical laser cutter.
+                </p>
+                <div class="bambu-fab-meta-pills">
+                  <span>Communication: MachName COM34</span>
+                  <span>Black Layer: Mode Engrave (Output Checked)</span>
+                  <span>Red Layer: Mode Cut (Output Checked)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Conclusion Box -->
+        <div class="bambu-conclusion-box">
+          <div class="bambu-conclusion-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="bambu-conclusion-content">
+            <h4>8. Conclusion: Practical Subtractive Prototyping Synthesis</h4>
+            <p>
+              The practical session provided comprehensive hands-on competency in laser cutting fundamentals, computer-aided manufacturing with LaserCAD V8.28, multi-layer vector design preparation, material-specific parameter selection, and essential machine safety protocols. Mastering the interplay between laser power, transit speed, and substrate characteristics enables rapid, reliable production of custom structural plates, enclosures, and precision components for engineering prototypes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- =========================================================================
@@ -10451,11 +10454,11 @@
             <li><a href="#solution">Our Solution</a></li>
             <li><a href="#principle">Working Principle</a></li>
             <li><a href="#mechanical">Mechanical Architecture</a></li>
-            <li><a href="#lasercad-cutting">Laser Cutting &amp; LaserCAD</a></li>
             <li><a href="#gallery">SolidWorks Designed Parts</a></li>
             <li><a href="#cad-assembly">3D Mechanical Assembly</a></li>
             <li><a href="#electronics">Electronics & Hardware</a></li>
             <li><a href="#applications">Potential Applications</a></li>
+            <li><a href="#new-things-learned">New Things Learned (Laser Cutting)</a></li>
           </ul>
         </div>
       </div>

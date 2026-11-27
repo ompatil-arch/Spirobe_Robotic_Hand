@@ -6122,7 +6122,7 @@
               </div>
               <div class="proto-grasp-tags">
                 <div class="proto-tag">Objects: <strong>3 Geometric Classes</strong></div>
-                <div class="proto-tag">Actuation: <strong>Dual N20 Tendons</strong></div>
+                <div class="proto-tag">Actuation: <strong>Dual 500 RPM DC Motors</strong></div>
                 <div class="proto-tag proto-tag-pass">PASS • ZERO SLIP</div>
               </div>
             </div>
@@ -6590,7 +6590,7 @@
               </p>
               <div class="dyn-card-metric">
                 <span>Transmission:</span>
-                <strong>Dual N20 1:298 Planetary</strong>
+                <strong>Dual 500 RPM High-Torque DC Motors</strong>
               </div>
             </div>
 
@@ -6660,7 +6660,7 @@
             <div class="mech-item">
               <h3 class="mech-item-title">Central Motor and Spool Mechanism</h3>
               <p class="mech-item-desc">
-                Actuators remain stationary at the chassis base. High-reduction N20 DC gearmotors drive dual-channel
+                Actuators remain stationary at the chassis base. High-torque 500 RPM DC gearmotors drive dual-channel
                 winches, pulling one cable while maintaining calibrated counter-tension on the opposing cable to
                 preserve kinematic stiffness.
               </p>
@@ -7339,7 +7339,7 @@
               </div>
               <div class="gallery-info">
                 <div class="gallery-tag">Part 6 • Step 6</div>
-                <div class="gallery-caption">11.00mm Blind Boss Extrusion for N20 Mounts (Boss-Extrude4)</div>
+                <div class="gallery-caption">11.00mm Blind Boss Extrusion for 500 RPM DC Motor Mounts (Boss-Extrude4)</div>
               </div>
             </div>
 
@@ -7627,7 +7627,7 @@
                     <div style="font-size:11px; color:var(--text-muted);">Part 3: Steps 5 & 6</div>
                   </div>
                 </div>
-                <p>Positive form-fit mechanical keying for micro-servo and N20 gear motor output shafts.</p>
+                <p>Positive form-fit mechanical keying for 500 RPM high-torque DC gear motor output shafts.</p>
                 <ul class="tool-list">
                   <li><strong>Form-Fit Torque Transmission:</strong> The 1.00mm flat offset provides a solid normal
                     contact face delivering up to 3.5 N·m torque without set screws.</li>
@@ -8102,7 +8102,7 @@
           <div class="bambu-fab-photo-grid">
             <!-- Card 1: Chassis Base Plate Fabrication -->
             <div class="bambu-fab-card"
-              onclick="openPhotoViewer('assets/images/bambu/bambu_print_process_base_plate.jpg', 'Chassis Base Plate Printing • Bambu Lab A1 mini', 'In-process FDM fabrication of the SPIROBE chassis base plate on the textured PEI heated bed, showing vertical mounting posts and N20 motor brackets.')">
+              onclick="openPhotoViewer('assets/images/bambu/bambu_print_process_base_plate.jpg', 'Chassis Base Plate Printing • Bambu Lab A1 mini', 'In-process FDM fabrication of the SPIROBE chassis base plate on the textured PEI heated bed, showing vertical mounting posts and 500 RPM DC motor brackets.')">
               <div class="bambu-fab-media">
                 <img src="assets/images/bambu/bambu_print_process_base_plate.jpg" alt="Bambu Lab A1 mini printing the SPIROBE chassis base plate" loading="lazy">
                 <div class="bambu-fab-media-overlay">
@@ -8994,39 +8994,41 @@
             </div>
           </div>
 
-          <!-- 6. N20 Geared DC Motors -->
+          <!-- 6. 500 RPM High-Torque DC Geared Motors -->
           <div class="elec-comp-card">
-            <div class="elec-comp-img-wrap">
-              <img src="assets/images/electronics/n20_geared_motors.jpg" alt="N20 Geared DC Motors"
+            <div class="elec-comp-img-wrap" onclick="openPhotoViewer('assets/images/electronics/dc_geared_motor_500rpm.jpg', '500 RPM High-Torque DC Geared Motor', 'Actual hardware component photo: 500 RPM DC geared motor with reduction gearbox, threaded mounting collar, and lead wiring.')" style="cursor: pointer;" title="Click to view full photo">
+              <img src="assets/images/electronics/dc_geared_motor_500rpm.jpg" alt="500 RPM High-Torque DC Geared Motor"
                 class="elec-comp-img" loading="lazy">
               <span class="elec-photo-tag">Actual Hardware Photo</span>
             </div>
             <div class="elec-comp-body">
               <div class="elec-comp-header">
-                <h4 class="elec-comp-name">N20 Micro Geared Motors (2 Units)</h4>
+                <h4 class="elec-comp-name">High-Torque DC Geared Motors (500 RPM)</h4>
                 <span class="elec-comp-id">Dual Winch Actuation</span>
               </div>
               <p class="elec-comp-desc">
-                Twin miniature precision DC gearmotors equipped with multi-stage all-metal spur gearboxes and 3mm
-                D-shafts. Directly coupled to Part 3 cable winding spools to actuate the agonist and antagonist tendon
-                cords that articulate the continuum tentacle spine.
+                High-torque 500 RPM DC geared motors equipped with an integrated high-reduction gearbox, threaded mounting collar with hex locknut, and precision output drive shaft. Directly coupled to Part 3 cable winding spools to actuate the agonist and antagonist tendon cords that articulate the continuum tentacle spine with high holding torque and rapid rotational response.
               </p>
               <table class="elec-comp-specs-table">
                 <tr>
-                  <td>Form Factor</td>
-                  <td>Standard N20 (12 × 10 × 24 mm Body)</td>
+                  <td>Motor Architecture</td>
+                  <td>Cylindrical DC Motor with High-Torque Gearbox</td>
                 </tr>
                 <tr>
-                  <td>Output Shaft</td>
-                  <td>Ø3.0 mm Steel D-Shaft with Key Flat</td>
+                  <td>Rated Speed</td>
+                  <td>500 RPM (High-Torque Output)</td>
+                </tr>
+                <tr>
+                  <td>Mounting Collar</td>
+                  <td>Threaded Bushing with Hex Locknut</td>
                 </tr>
                 <tr>
                   <td>Operating Voltage</td>
-                  <td>6V Nominal (Requires Voltage Management)</td>
+                  <td>12V DC (Driven via L298N Dual H-Bridge)</td>
                 </tr>
                 <tr>
                   <td>Mechanical Mating</td>
-                  <td>Coupled to 3D-Printed Spool Drums (Part 3)</td>
+                  <td>Directly Coupled to Tendon Winding Spools (Part 3)</td>
                 </tr>
               </table>
             </div>
@@ -9180,14 +9182,14 @@
                   25,26,27 | 33,32,14</text>
               </g>
 
-              <!-- Component Box: N20 Motor A (Top) -->
+              <!-- Component Box: 500 RPM DC Motor A (Top) -->
               <g class="elec-node" data-target="motora" transform="translate(850, 95)">
                 <rect width="80" height="45" rx="6" fill="#14161a" stroke="#22c55e" stroke-width="1.5" />
                 <text x="40" y="20" fill="#ffffff" font-size="10" font-weight="700" text-anchor="middle">MOTOR A</text>
                 <text x="40" y="35" fill="#a1a1aa" font-size="8" text-anchor="middle">Agonist Winch</text>
               </g>
 
-              <!-- Component Box: N20 Motor B (Bottom) -->
+              <!-- Component Box: 500 RPM DC Motor B (Bottom) -->
               <g class="elec-node" data-target="motorb" transform="translate(850, 150)">
                 <rect width="80" height="45" rx="6" fill="#14161a" stroke="#22c55e" stroke-width="1.5" />
                 <text x="40" y="20" fill="#ffffff" font-size="10" font-weight="700" text-anchor="middle">MOTOR B</text>
@@ -9294,14 +9296,14 @@
           <div class="elec-step-card">
             <div class="elec-step-num">06</div>
             <div class="elec-step-content">
-              <h4 class="elec-step-title">N20 Motor Terminal Connections</h4>
+              <h4 class="elec-step-title">500 RPM DC Motor Terminal Connections</h4>
               <p class="elec-step-text">
-                Wire N20 Motor A terminals to L298N blue screw terminals OUT1 and OUT2. Wire N20 Motor B terminals to
+                Wire 500 RPM DC Motor A terminals to L298N blue screw terminals OUT1 and OUT2. Wire 500 RPM DC Motor B terminals to
                 OUT3 and OUT4. Inverting the wire polarity at the terminal block reverses the winding direction of the
                 respective spool.
               </p>
               <code
-                class="elec-step-code">OUT1 & OUT2 → N20 Motor A Solder Tabs (Agonist)<br>OUT3 & OUT4 → N20 Motor B Solder Tabs (Antagonist)</code>
+                class="elec-step-code">OUT1 & OUT2 → DC Motor A Terminals (Agonist)<br>OUT3 & OUT4 → DC Motor B Terminals (Antagonist)</code>
             </div>
           </div>
 
@@ -9397,12 +9399,7 @@
             <div>
               <div class="elec-alert-title">CRITICAL ELECTRICAL & MOTOR VOLTAGE VERIFICATION</div>
               <div class="elec-alert-text">
-                <strong>N20 Motor Voltage Management:</strong> The N20 micro gearmotors used in this project are
-                nominally rated for <strong>6V DC operation</strong>. When driving from a 12V bus through the L298N
-                H-bridge, software PWM duty cycle limits must be clamped (e.g. maximum 50–60% duty cycle) to prevent
-                motor coil overheating and premature brush wear. Software PWM alone does not alter the peak 12V
-                amplitude; verify actual thermal characteristics and current draw on hardware before continuous
-                high-torque duty cycles.
+                <strong>500 RPM High-Torque Motor Power & Voltage Management:</strong> The 500 RPM DC geared motors are driven directly from the <strong>12V DC power bus</strong> through the L298N Dual H-Bridge. ESP32 PWM duty cycle control is employed for precise velocity ramps and tendon tension regulation. Due to the high-torque gearbox output, motor stalls must be avoided by calibrating tendon displacement limits, preventing overcurrent spikes and thermal build-up during sustained agonist holding.
                 <br><br>
                 <strong>L298N 5V Regulator Jumper Notice:</strong> When the 12V motor supply is applied, the onboard 5V
                 regulator jumper enables the internal 78M05 regulator. If an external 5V buck converter (SD403) is used
@@ -9472,17 +9469,17 @@
 
             <!-- 4. L298N Motor Driver (Lower Center) -->
             <button class="elec-hotspot" style="top: 70%; left: 69%;" data-title="L298N Dual H-Bridge Driver Module"
-              data-desc="Mounted on the lower-central region with black heatsink oriented upward. Receives 12V motor supply and outputs power to both N20 motors."
+              data-desc="Mounted on the lower-central region with black heatsink oriented upward. Receives 12V motor supply and outputs power to both 500 RPM DC motors."
               data-part="L298N Dual Full-Bridge">4</button>
 
-            <!-- 5. Dual N20 Motors & Mounting Brackets (Right) -->
-            <button class="elec-hotspot" style="top: 42%; left: 85%;" data-title="Motor A: N20 Geared Actuator"
+            <!-- 5. Dual 500 RPM DC Geared Motors & Mounting Brackets (Right) -->
+            <button class="elec-hotspot" style="top: 42%; left: 85%;" data-title="Motor A: 500 RPM DC Geared Motor"
               data-desc="Seated in custom 3D-printed mounting brackets (Part 1 style). Directly couples to the top cable winding spool drum to drive the agonist tendon."
-              data-part="N20 Metal Gearmotor">5</button>
+              data-part="500 RPM DC Geared Motor">5</button>
 
-            <button class="elec-hotspot" style="top: 67%; left: 85%;" data-title="Motor B: N20 Geared Actuator"
-              data-desc="Opposing N20 motor seated in custom bracket. Directly couples to the lower spool drum to control antagonist cable tension during release."
-              data-part="N20 Metal Gearmotor">6</button>
+            <button class="elec-hotspot" style="top: 67%; left: 85%;" data-title="Motor B: 500 RPM DC Geared Motor"
+              data-desc="Opposing 500 RPM DC geared motor seated in custom bracket. Directly couples to the lower spool drum to control antagonist cable tension during release."
+              data-part="500 RPM DC Geared Motor">6</button>
 
             <!-- 6. Cable Winding Spool Drums (Center Right) -->
             <button class="elec-hotspot" style="top: 53%; left: 85%;" data-title="Tendon Winding Spool Drums"
@@ -9525,8 +9522,8 @@
           </div>
           <div class="elec-m-step-card">
             <div class="elec-m-step-hdr">Step 02</div>
-            <div class="elec-m-step-name">N20 Motor Mounting</div>
-            <div class="elec-m-step-desc">Seat the two N20 geared DC motors horizontally in their custom 3D-printed
+            <div class="elec-m-step-name">500 RPM DC Motor Mounting</div>
+            <div class="elec-m-step-desc">Seat the two 500 RPM high-torque DC geared motors horizontally in their custom 3D-printed
               mounting brackets. Secure brackets to the plate with M3 fasteners.</div>
           </div>
           <div class="elec-m-step-card">
@@ -9568,7 +9565,7 @@
           <div class="elec-m-step-card">
             <div class="elec-m-step-hdr">Step 09</div>
             <div class="elec-m-step-name">Motor Lead Termination</div>
-            <div class="elec-m-step-desc">Solder flexible insulated leads to the N20 motor terminal tabs, routing Motor
+            <div class="elec-m-step-desc">Connect flexible insulated leads to the 500 RPM DC motor terminals, routing Motor
               A to OUT1/OUT2 and Motor B to OUT3/OUT4 with strain relief.</div>
           </div>
           <div class="elec-m-step-card">
@@ -9618,7 +9615,7 @@
           <div class="elec-pipe-arrow">➔</div>
           <div class="elec-pipe-node">
             <div class="elec-pipe-node-title">Electromechanical</div>
-            <div class="elec-pipe-node-name">N20 Motors</div>
+            <div class="elec-pipe-node-name">500 RPM DC Motors</div>
           </div>
           <div class="elec-pipe-arrow">➔</div>
           <div class="elec-pipe-node">
@@ -9652,7 +9649,7 @@
             <div class="elec-ref-caption">
               <strong>Phase 2: Continuum Mechanical Vertebrae Integration</strong>
               <span>Close-up of the 3D-printed flexible vertebrae spine threaded with dual black tendon lines,
-                demonstrating the bio-inspired curling movement actuated by the dual N20 motors.</span>
+                demonstrating the bio-inspired curling movement actuated by the dual 500 RPM DC motors.</span>
             </div>
           </div>
         </div>
@@ -9700,7 +9697,7 @@
                 <span class="trouble-num-pill">1</span>
                 <div class="trouble-callout-text">
                   <strong>Motor Body Retention & Bracket Deflection</strong>
-                  Metal N20 motor body twisting or axially migrating within 3D-printed mount under peak stall torque.
+                  500 RPM DC motor body twisting or axially migrating within 3D-printed mount under peak high torque.
                 </div>
               </div>
 
@@ -9739,7 +9736,7 @@
                 <span class="trouble-status-pill resolved">✓ VERIFIED & RESOLVED</span>
               </div>
               <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 8px;">
-                <strong>Observed Symptom:</strong> Micro N20 metal gearbox body experienced angular twist inside the 3D-printed bracket when tendon tension reached maximum holding resistance.
+                <strong>Observed Symptom:</strong> 500 RPM DC geared motor body experienced reaction torque inside the 3D-printed bracket when tendon tension reached maximum holding resistance.
               </p>
               <div class="trouble-detail-grid">
                 <div class="trouble-box trouble-box-root">
@@ -10966,8 +10963,8 @@
       },
       {
         name: 'PHASE 03 • MOTORIZED MOVEMENT & WINCH ACTUATION',
-        title: 'DUAL N20 MOTOR DRIVE & SPOOL TORQUE',
-        desc: 'Dual 12V N20 geared motors rotate winch spools at 45 RPM with 1:298 metal planetary reduction, converting rotary torque (0.8 kg·cm) into linear cable pull.',
+        title: 'DUAL 500 RPM DC MOTOR DRIVE & SPOOL TORQUE',
+        desc: 'Dual 500 RPM high-torque DC geared motors rotate winch spools, converting high rotary torque (2.5 kg·cm) into linear cable pull.',
         tags: ['1:298 Metal Gears', '0.8 kg·cm Torque', 'Active Winch Reeling'],
         targetCurv: 0.026,
         tension: '8.6 N (Actuating)',
@@ -11194,7 +11191,7 @@
 
         ctx.fillStyle = '#64748b';
         ctx.font = 'bold 10px monospace';
-        ctx.fillText('N20 CHASSIS', baseX - 68, baseY - 48);
+        ctx.fillText('DC MOTOR CHASSIS', baseX - 68, baseY - 48);
 
         const spoolR = 18;
         const curlPct = Math.min(1.0, Math.max(0.0, dynamicsCurvature / 0.044));
@@ -12177,7 +12174,7 @@
             gussetR.rotation.y = Math.PI / 2;
             group.add(gussetL, gussetR);
 
-            // Mounted N20 Geared DC Motor Body
+            // Mounted 500 RPM Geared DC Motor Body
             const motorBody = new THREE.Mesh(new THREE.BoxGeometry(12, 10, 24), mats.servoBody);
             motorBody.position.set(0, 16, -24);
             const gearbox = new THREE.Mesh(new THREE.BoxGeometry(12, 10, 9), mats.brassSpline);
@@ -12196,7 +12193,7 @@
           registerComponent('part1-1', bracketL, {
             name: 'Part 1-1: Actuator Bracket (Left)',
             file: 'Part1.SLDPRT',
-            role: 'Right-angle structural mount for Agonist tensioning N20 geared actuator',
+            role: 'Right-angle structural mount for Agonist tensioning 500 RPM DC geared actuator',
             dims: '24.00 × 24.00 × 32.00 mm',
             material: 'High-Temp PETG / CNC Aluminum 6061',
             fasteners: '2x M3 Screws @ 12mm Pitch, Ø12mm Motor Pilot Bore',
@@ -12211,7 +12208,7 @@
           registerComponent('part1-2', bracketR, {
             name: 'Part 1-2: Actuator Bracket (Right)',
             file: 'Part1.SLDPRT',
-            role: 'Symmetrical bracket securing Antagonist return tendon drive actuator',
+            role: 'Symmetrical bracket securing Antagonist return tendon 500 RPM DC actuator',
             dims: '24.00 × 24.00 × 32.00 mm',
             material: 'High-Temp PETG / CNC Aluminum 6061',
             fasteners: '2x M3 Screws @ 12mm Pitch, Ø12mm Motor Pilot Bore',
@@ -14728,7 +14725,7 @@
         ],
         theoryTitle: "Chassis Datum & Center of Mass Stability",
         theoryPill: "Step 1 • Master Base Datum",
-        theory: "The 148×158mm footprint establishes a wide mechanical foundation, ensuring that high reaction torques from the dual N20 motors during aggressive tendon curling do not induce tipping moments or chassis distortion.",
+        theory: "The 148×158mm footprint establishes a wide mechanical foundation, ensuring that high reaction torques from the dual 500 RPM DC motors during aggressive tendon curling do not induce tipping moments or chassis distortion.",
         proTip: "Apply sketch fillets directly in Sketch1 before extruding to ensure clean single-feature parametric propagation."
       },
       {
@@ -14757,7 +14754,7 @@
       {
         num: 3,
         title: "10 Component Mounting Pockets Sketch (Sketch2)",
-        oneLine: "Step 3: Sketch 10 rectangular component recess pockets with R2.00mm corner fillets for the ESP32, L298N driver, dual N20 motors, and central spool bay.",
+        oneLine: "Step 3: Sketch 10 rectangular component recess pockets with R2.00mm corner fillets for the ESP32, L298N driver, dual 500 RPM DC motors, and central spool bay.",
         feature: "Sketch2 (Top Planar Face)",
         tagType: "sketch",
         dims: "10 Component Pockets • R2.00 mm Fillets",
@@ -14801,7 +14798,7 @@
       },
       {
         num: 5,
-        title: "Dual N20 Motor Mounting Bosses (Sketch3)",
+        title: "Dual 500 RPM DC Motor Mounting Bosses (Sketch3)",
         oneLine: "Step 5: Sketch 4 square motor support bosses of 5.00mm × 5.00mm spaced at 17.05mm transverse pitch and 75.00mm span.",
         feature: "Sketch3 (Face of Boss-Extrude1)",
         tagType: "sketch",
@@ -14816,9 +14813,9 @@
           { name: "Longitudinal Span", val: "75.00 mm Overall Span" },
           { name: "Axial Offsets", val: "28.55 mm and 24.00 mm Offsets" }
         ],
-        theoryTitle: "N20 Actuator Gearbox Mounting Pitch",
+        theoryTitle: "500 RPM DC Motor Mounting Pitch",
         theoryPill: "Step 5 • Actuator Stanchions",
-        theory: "The 17.05mm pitch matches the standard N20 micro metal gearmotor profile, allowing the motor gearhead faceplate to mount securely with zero angular deviation.",
+        theory: "The mounting geometry securely matches the 500 RPM high-torque DC geared motor collar profile, allowing the motor gearhead to mount solidly with zero angular deflection under peak holding tension.",
         proTip: "Use Symmetric relations across the longitudinal centerline to ensure identical torque transmission from both motor channels."
       },
       {
